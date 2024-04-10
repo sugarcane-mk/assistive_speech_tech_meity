@@ -1,0 +1,20 @@
+# gmm-acc-stats-ali exp/mono2/10.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/16/utt2spk scp:data/train/split30/16/cmvn.scp scp:data/train/split30/16/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/16/utt2spk ark:exp/mono2/trans.16 ark:- ark:- |" "ark,s,cs:gunzip -c exp/mono2/ali.16.gz|" exp/mono2/10.16.acc 
+# Started at Thu Feb 27 12:05:21 IST 2020
+#
+gmm-acc-stats-ali exp/mono2/10.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/16/utt2spk scp:data/train/split30/16/cmvn.scp scp:data/train/split30/16/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/16/utt2spk ark:exp/mono2/trans.16 ark:- ark:- |' 'ark,s,cs:gunzip -c exp/mono2/ali.16.gz|' exp/mono2/10.16.acc 
+transform-feats --utt2spk=ark:data/train/split30/16/utt2spk ark:exp/mono2/trans.16 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/16/utt2spk scp:data/train/split30/16/cmvn.scp scp:data/train/split30/16/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance train_S19_9_3_20 avg. like is -92.1108 over 292 frames.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance train_S1_10_6_20 avg. like is -88.5253 over 308 frames.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance train_S1_12_2_20 avg. like is -86.1489 over 307 frames.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance train_S1_3_5_20 avg. like is -84.6181 over 342 frames.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:105) Processed 250 utterances; for utterance train_S1_5_1_20 avg. like is -87.2358 over 421 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 276 utterances, errors on 0
+LOG (transform-feats:main():transform-feats.cc:158) Overall average logdet is 0 over 95972 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 276 utterances; 0 had errors.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:112) Done 276 files, 0 with errors.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -88.0709 over 95972 frames.
+LOG (gmm-acc-stats-ali:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Feb 27 12:05:21 IST 2020, elapsed time 0 seconds

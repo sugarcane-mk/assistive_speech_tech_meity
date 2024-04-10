@@ -1,0 +1,628 @@
+# lattice-scale --inv-acoustic-scale=9 "ark:gunzip -c exp/mono2/decode_test/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/mono2/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/mono2/graph/words.txt | local/wer_hyp_filter > exp/mono2/decode_test/scoring_kaldi/penalty_1.0/9.txt 
+# Started at Mon Feb 10 15:33:23 IST 2020
+#
+lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
+lattice-best-path --word-symbol-table=exp/mono2/graph/words.txt ark:- ark,t:- 
+lattice-scale --inv-acoustic-scale=9 'ark:gunzip -c exp/mono2/decode_test/lat.*.gz|' ark:- 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_1, best cost 14.6967 + 1945.43 = 1960.12 over 189 frames.
+test_S10_1_1 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_2, best cost 14.6967 + 1942.43 = 1957.13 over 189 frames.
+test_S10_1_2 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_3, best cost 14.6967 + 1946.53 = 1961.22 over 189 frames.
+test_S10_1_3 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_4, best cost 14.6889 + 1942.94 = 1957.63 over 189 frames.
+test_S10_1_4 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_5, best cost 14.6967 + 1943 = 1957.7 over 189 frames.
+test_S10_1_5 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_6, best cost 14.6864 + 1941.43 = 1956.12 over 189 frames.
+test_S10_1_6 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_1_7, best cost 14.6967 + 1935.14 = 1949.84 over 189 frames.
+test_S10_1_7 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_1, best cost 14.3915 + 1814.44 = 1828.84 over 174 frames.
+test_S10_2_1 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_2, best cost 14.3915 + 1815.07 = 1829.46 over 174 frames.
+test_S10_2_2 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_3, best cost 14.3938 + 1814.57 = 1828.96 over 174 frames.
+test_S10_2_3 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_4, best cost 14.3938 + 1814.9 = 1829.29 over 174 frames.
+test_S10_2_4 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_5, best cost 14.3938 + 1813.33 = 1827.72 over 174 frames.
+test_S10_2_5 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_6, best cost 14.3915 + 1811.88 = 1826.27 over 174 frames.
+test_S10_2_6 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S10_2_7, best cost 14.3915 + 1813.17 = 1827.56 over 174 frames.
+test_S10_2_7 SIL enakkeu vayiru sariyilla SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_1, best cost 23.1305 + 2956.19 = 2979.32 over 274 frames.
+test_S11_1_1 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_2, best cost 23.1384 + 2956.11 = 2979.25 over 274 frames.
+test_S11_1_2 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_3, best cost 23.1384 + 2955.4 = 2978.54 over 274 frames.
+test_S11_1_3 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_4, best cost 23.1305 + 2956.86 = 2979.99 over 274 frames.
+test_S11_1_4 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_5, best cost 23.1305 + 2955.23 = 2978.36 over 274 frames.
+test_S11_1_5 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_6, best cost 23.1384 + 2955.77 = 2978.91 over 274 frames.
+test_S11_1_6 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_1_7, best cost 23.1305 + 2953.29 = 2976.42 over 274 frames.
+test_S11_1_7 SIL artandcraft activity panalaamaa SIL miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_1, best cost 26.2656 + 3058.64 = 3084.91 over 283 frames.
+test_S11_2_1 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_2, best cost 26.2656 + 3058.05 = 3084.32 over 283 frames.
+test_S11_2_2 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_3, best cost 26.2656 + 3056.39 = 3082.65 over 283 frames.
+test_S11_2_3 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_4, best cost 26.2656 + 3056.83 = 3083.1 over 283 frames.
+test_S11_2_4 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_5, best cost 26.2656 + 3058.95 = 3085.22 over 283 frames.
+test_S11_2_5 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_6, best cost 26.2656 + 3055.97 = 3082.24 over 283 frames.
+test_S11_2_6 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S11_2_7, best cost 26.2656 + 3048.85 = 3075.11 over 283 frames.
+test_S11_2_7 SIL artandcraft activity panalaamaa SIL artandcraft activity panalaamaa SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_1, best cost 15.0685 + 2749.93 = 2765 over 262 frames.
+test_S12_1_1 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_2, best cost 15.0157 + 2748.34 = 2763.36 over 262 frames.
+test_S12_1_2 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_3, best cost 15.0781 + 2744.58 = 2759.66 over 262 frames.
+test_S12_1_3 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_4, best cost 15.0677 + 2745.15 = 2760.22 over 262 frames.
+test_S12_1_4 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_5, best cost 15.0781 + 2745.86 = 2760.93 over 262 frames.
+test_S12_1_5 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_6, best cost 15.0157 + 2737.91 = 2752.93 over 262 frames.
+test_S12_1_6 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_1_7, best cost 14.9847 + 2734.74 = 2749.72 over 262 frames.
+test_S12_1_7 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_1, best cost 14.4079 + 2081.84 = 2096.25 over 197 frames.
+test_S12_2_1 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_2, best cost 14.4079 + 2080.35 = 2094.76 over 197 frames.
+test_S12_2_2 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_3, best cost 14.4079 + 2076.69 = 2091.1 over 197 frames.
+test_S12_2_3 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_4, best cost 14.4079 + 2079.98 = 2094.39 over 197 frames.
+test_S12_2_4 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_5, best cost 14.4079 + 2078.74 = 2093.15 over 197 frames.
+test_S12_2_5 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_6, best cost 14.4119 + 2079.98 = 2094.39 over 197 frames.
+test_S12_2_6 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S12_2_7, best cost 14.4079 + 2077.14 = 2091.55 over 197 frames.
+test_S12_2_7 SIL marundu pooteu varenmiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_1, best cost 12.3496 + 1334.62 = 1346.96 over 127 frames.
+test_S13_1_1 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_2, best cost 12.3393 + 1335.51 = 1347.85 over 127 frames.
+test_S13_1_2 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_3, best cost 12.3496 + 1335.61 = 1347.96 over 127 frames.
+test_S13_1_3 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_4, best cost 12.3496 + 1335.17 = 1347.52 over 127 frames.
+test_S13_1_4 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_5, best cost 12.3496 + 1332.64 = 1344.99 over 127 frames.
+test_S13_1_5 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_6, best cost 12.3186 + 1328.71 = 1341.03 over 127 frames.
+test_S13_1_6 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_1_7, best cost 12.3243 + 1324.65 = 1336.98 over 127 frames.
+test_S13_1_7 SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_1, best cost 21.7935 + 1653.78 = 1675.57 over 155 frames.
+test_S13_2_1 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_2, best cost 21.7935 + 1651.45 = 1673.25 over 155 frames.
+test_S13_2_2 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_3, best cost 21.7935 + 1654.24 = 1676.03 over 155 frames.
+test_S13_2_3 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_4, best cost 21.7935 + 1648.68 = 1670.47 over 155 frames.
+test_S13_2_4 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_5, best cost 21.7805 + 1647.78 = 1669.56 over 155 frames.
+test_S13_2_5 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_6, best cost 21.773 + 1649.39 = 1671.16 over 155 frames.
+test_S13_2_6 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S13_2_7, best cost 21.7805 + 1637.29 = 1659.07 over 155 frames.
+test_S13_2_7 SIL appa koopidunga SIL appa koopidunga SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_1, best cost 14.9915 + 2544.16 = 2559.16 over 243 frames.
+test_S14_1_1 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_2, best cost 14.9807 + 2550.04 = 2565.02 over 243 frames.
+test_S14_1_2 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_3, best cost 14.9807 + 2541.8 = 2556.78 over 243 frames.
+test_S14_1_3 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_4, best cost 14.9915 + 2543.64 = 2558.63 over 243 frames.
+test_S14_1_4 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_5, best cost 14.9915 + 2535.75 = 2550.74 over 243 frames.
+test_S14_1_5 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_6, best cost 14.9915 + 2532.91 = 2547.91 over 243 frames.
+test_S14_1_6 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_1_7, best cost 14.9915 + 2515.78 = 2530.77 over 243 frames.
+test_S14_1_7 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_1, best cost 14.584 + 1828.76 = 1843.35 over 183 frames.
+test_S14_2_1 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_2, best cost 14.5737 + 1829.98 = 1844.56 over 183 frames.
+test_S14_2_2 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_3, best cost 14.5799 + 1831.12 = 1845.7 over 183 frames.
+test_S14_2_3 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_4, best cost 14.5721 + 1828.61 = 1843.18 over 183 frames.
+test_S14_2_4 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_5, best cost 14.5824 + 1828.67 = 1843.25 over 183 frames.
+test_S14_2_5 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_6, best cost 14.5824 + 1826.15 = 1840.73 over 183 frames.
+test_S14_2_6 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S14_2_7, best cost 14.5824 + 1826.6 = 1841.18 over 183 frames.
+test_S14_2_7 SIL writing panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_1, best cost 14.2529 + 1327.29 = 1341.54 over 128 frames.
+test_S15_1_1 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_2, best cost 14.2735 + 1328.1 = 1342.38 over 128 frames.
+test_S15_1_2 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_3, best cost 14.1394 + 1326.99 = 1341.13 over 128 frames.
+test_S15_1_3 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_4, best cost 14.1394 + 1327.32 = 1341.46 over 128 frames.
+test_S15_1_4 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_5, best cost 14.1394 + 1328.34 = 1342.48 over 128 frames.
+test_S15_1_5 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_6, best cost 14.2529 + 1325.55 = 1339.81 over 128 frames.
+test_S15_1_6 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_1_7, best cost 14.1289 + 1324.35 = 1338.47 over 128 frames.
+test_S15_1_7 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_1, best cost 14.203 + 1319.88 = 1334.09 over 132 frames.
+test_S15_2_1 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_2, best cost 14.203 + 1319.43 = 1333.63 over 132 frames.
+test_S15_2_2 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_3, best cost 14.208 + 1318.91 = 1333.11 over 132 frames.
+test_S15_2_3 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_4, best cost 14.208 + 1318.53 = 1332.74 over 132 frames.
+test_S15_2_4 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_5, best cost 14.208 + 1318.91 = 1333.12 over 132 frames.
+test_S15_2_5 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_6, best cost 14.208 + 1317.07 = 1331.28 over 132 frames.
+test_S15_2_6 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S15_2_7, best cost 14.208 + 1315.69 = 1329.89 over 132 frames.
+test_S15_2_7 SIL prayer panalaam miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_1, best cost 14.736 + 2458.95 = 2473.69 over 233 frames.
+test_S16_1_1 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_2, best cost 14.7438 + 2458.71 = 2473.45 over 233 frames.
+test_S16_1_2 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_3, best cost 14.7438 + 2457.43 = 2472.17 over 233 frames.
+test_S16_1_3 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_4, best cost 14.736 + 2456.1 = 2470.84 over 233 frames.
+test_S16_1_4 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_5, best cost 14.7438 + 2459.14 = 2473.88 over 233 frames.
+test_S16_1_5 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_6, best cost 14.7438 + 2452.04 = 2466.78 over 233 frames.
+test_S16_1_6 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_1_7, best cost 14.736 + 2436.24 = 2450.97 over 233 frames.
+test_S16_1_7 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_1, best cost 14.5851 + 2274.17 = 2288.76 over 202 frames.
+test_S16_2_1 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_2, best cost 14.5851 + 2272.7 = 2287.29 over 202 frames.
+test_S16_2_2 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_3, best cost 14.5851 + 2273.12 = 2287.7 over 202 frames.
+test_S16_2_3 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_4, best cost 14.5851 + 2273.7 = 2288.28 over 202 frames.
+test_S16_2_4 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_5, best cost 14.5851 + 2272.11 = 2286.69 over 202 frames.
+test_S16_2_5 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_6, best cost 14.5851 + 2274.23 = 2288.82 over 202 frames.
+test_S16_2_6 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S16_2_7, best cost 14.5851 + 2271.79 = 2286.38 over 202 frames.
+test_S16_2_7 SIL enakkeu padinaareu wayaseu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_1, best cost 22.8329 + 2208.27 = 2231.11 over 211 frames.
+test_S17_1_1 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_2, best cost 22.8329 + 2204.26 = 2227.1 over 211 frames.
+test_S17_1_2 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_3, best cost 22.8328 + 2206.95 = 2229.78 over 211 frames.
+test_S17_1_3 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_4, best cost 22.8319 + 2204.84 = 2227.67 over 211 frames.
+test_S17_1_4 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_5, best cost 22.8328 + 2208.38 = 2231.22 over 211 frames.
+test_S17_1_5 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_6, best cost 22.8329 + 2203.46 = 2226.3 over 211 frames.
+test_S17_1_6 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_1_7, best cost 22.8405 + 2198.73 = 2221.57 over 211 frames.
+test_S17_1_7 SIL enakkeu padinaareu wayaseu SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_1, best cost 10.9114 + 1565.19 = 1576.1 over 151 frames.
+test_S17_2_1 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_2, best cost 10.9114 + 1564.22 = 1575.13 over 151 frames.
+test_S17_2_2 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_3, best cost 10.9114 + 1565.81 = 1576.72 over 151 frames.
+test_S17_2_3 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_4, best cost 10.9114 + 1565.34 = 1576.25 over 151 frames.
+test_S17_2_4 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_5, best cost 10.9114 + 1566.58 = 1577.49 over 151 frames.
+test_S17_2_5 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_6, best cost 10.9217 + 1565.59 = 1576.51 over 151 frames.
+test_S17_2_6 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S17_2_7, best cost 10.9045 + 1562.59 = 1573.49 over 151 frames.
+test_S17_2_7 SIL irubadeurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_1, best cost 44.1642 + 4865.71 = 4909.87 over 465 frames.
+test_S18_1_1 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_2, best cost 44.1642 + 4876.27 = 4920.44 over 465 frames.
+test_S18_1_2 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_3, best cost 44.1759 + 4867.26 = 4911.44 over 465 frames.
+test_S18_1_3 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_4, best cost 44.1651 + 4867.88 = 4912.04 over 465 frames.
+test_S18_1_4 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_5, best cost 44.1293 + 4858.17 = 4902.29 over 465 frames.
+test_S18_1_5 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_6, best cost 44.1293 + 4852.69 = 4896.81 over 465 frames.
+test_S18_1_6 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_1_7, best cost 44.179 + 4842.11 = 4886.29 over 465 frames.
+test_S18_1_7 SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_1, best cost 16.9661 + 3032.91 = 3049.88 over 292 frames.
+test_S18_2_1 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_2, best cost 16.9557 + 3037.44 = 3054.4 over 292 frames.
+test_S18_2_2 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_3, best cost 16.9514 + 3031.06 = 3048.02 over 292 frames.
+test_S18_2_3 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_4, best cost 16.9454 + 3033.99 = 3050.94 over 292 frames.
+test_S18_2_4 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_5, best cost 16.9557 + 3030.88 = 3047.84 over 292 frames.
+test_S18_2_5 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_6, best cost 16.9411 + 3031.27 = 3048.21 over 292 frames.
+test_S18_2_6 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S18_2_7, best cost 16.9514 + 3023.02 = 3039.97 over 292 frames.
+test_S18_2_7 SIL mosesum naliniyum en bestfriend SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_1, best cost 12.5583 + 1669.95 = 1682.51 over 151 frames.
+test_S19_1_1 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_2, best cost 12.5583 + 1668.99 = 1681.54 over 151 frames.
+test_S19_1_2 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_3, best cost 12.5583 + 1669.85 = 1682.41 over 151 frames.
+test_S19_1_3 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_4, best cost 12.5583 + 1668.71 = 1681.27 over 151 frames.
+test_S19_1_4 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_5, best cost 12.5583 + 1668.81 = 1681.36 over 151 frames.
+test_S19_1_5 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_6, best cost 12.5583 + 1669.76 = 1682.32 over 151 frames.
+test_S19_1_6 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_1_7, best cost 12.5583 + 1667.81 = 1680.37 over 151 frames.
+test_S19_1_7 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_1, best cost 12.727 + 1899.82 = 1912.55 over 180 frames.
+test_S19_2_1 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_2, best cost 12.7242 + 1899.82 = 1912.54 over 180 frames.
+test_S19_2_2 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_3, best cost 12.7242 + 1899.43 = 1912.15 over 180 frames.
+test_S19_2_3 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_4, best cost 12.7242 + 1898.12 = 1910.84 over 180 frames.
+test_S19_2_4 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_5, best cost 12.727 + 1898.36 = 1911.09 over 180 frames.
+test_S19_2_5 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_6, best cost 12.727 + 1892.16 = 1904.88 over 180 frames.
+test_S19_2_6 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S19_2_7, best cost 12.727 + 1892.3 = 1905.03 over 180 frames.
+test_S19_2_7 SIL enakkeu pasikkuedu SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_1, best cost 13.0054 + 2186.65 = 2199.65 over 222 frames.
+test_S1_1_1 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_2, best cost 13.0054 + 2185.59 = 2198.6 over 222 frames.
+test_S1_1_2 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_3, best cost 13.0058 + 2188.14 = 2201.15 over 222 frames.
+test_S1_1_3 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_4, best cost 13.0059 + 2184.47 = 2197.47 over 222 frames.
+test_S1_1_4 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_5, best cost 13.0054 + 2184.68 = 2197.69 over 222 frames.
+test_S1_1_5 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_6, best cost 13.0054 + 2185 = 2198.01 over 222 frames.
+test_S1_1_6 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_1_7, best cost 12.9662 + 2174.68 = 2187.64 over 222 frames.
+test_S1_1_7 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_1, best cost 13.0573 + 2539.54 = 2552.59 over 257 frames.
+test_S1_2_1 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_2, best cost 13.0573 + 2537.37 = 2550.43 over 257 frames.
+test_S1_2_2 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_3, best cost 13.0573 + 2542.44 = 2555.49 over 257 frames.
+test_S1_2_3 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_4, best cost 13.0573 + 2543.78 = 2556.84 over 257 frames.
+test_S1_2_4 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_5, best cost 13.0573 + 2540.89 = 2553.94 over 257 frames.
+test_S1_2_5 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_6, best cost 13.0573 + 2539.17 = 2552.23 over 257 frames.
+test_S1_2_6 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S1_2_7, best cost 13.0573 + 2529.77 = 2542.83 over 257 frames.
+test_S1_2_7 SIL goodmorning miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_1, best cost 27.1698 + 3004.65 = 3031.82 over 287 frames.
+test_S20_1_1 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_2, best cost 27.1724 + 3003.47 = 3030.64 over 287 frames.
+test_S20_1_2 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_3, best cost 27.1698 + 3000.5 = 3027.67 over 287 frames.
+test_S20_1_3 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_4, best cost 27.1744 + 3000.33 = 3027.5 over 287 frames.
+test_S20_1_4 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_5, best cost 27.1744 + 3000.85 = 3028.03 over 287 frames.
+test_S20_1_5 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_6, best cost 15.3847 + 3010.31 = 3025.69 over 287 frames.
+test_S20_1_6 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_1_7, best cost 27.1309 + 2993.7 = 3020.83 over 287 frames.
+test_S20_1_7 SIL violetcolor nooteu nooreurooba SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_1, best cost 14.9548 + 2180.33 = 2195.28 over 221 frames.
+test_S20_2_1 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_2, best cost 14.9583 + 2184.05 = 2199 over 221 frames.
+test_S20_2_2 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_3, best cost 14.9548 + 2180.27 = 2195.22 over 221 frames.
+test_S20_2_3 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_4, best cost 14.9586 + 2180.85 = 2195.81 over 221 frames.
+test_S20_2_4 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_5, best cost 14.954 + 2180.71 = 2195.66 over 221 frames.
+test_S20_2_5 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_6, best cost 14.954 + 2182.53 = 2197.49 over 221 frames.
+test_S20_2_6 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S20_2_7, best cost 14.8931 + 2175.87 = 2190.77 over 221 frames.
+test_S20_2_7 SIL violetcolor nooteu nooreurooba SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_1, best cost 17.0139 + 3095.09 = 3112.1 over 299 frames.
+test_S21_1_1 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_2, best cost 17.0139 + 3096.44 = 3113.46 over 299 frames.
+test_S21_1_2 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_3, best cost 17.0139 + 3092.19 = 3109.21 over 299 frames.
+test_S21_1_3 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_4, best cost 17.0139 + 3091.41 = 3108.43 over 299 frames.
+test_S21_1_4 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_5, best cost 17.0186 + 3087.54 = 3104.56 over 299 frames.
+test_S21_1_5 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_6, best cost 17.0186 + 3078.05 = 3095.06 over 299 frames.
+test_S21_1_6 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_1_7, best cost 17.0192 + 3069.94 = 3086.96 over 299 frames.
+test_S21_1_7 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_1, best cost 16.5383 + 2233.24 = 2249.78 over 213 frames.
+test_S21_2_1 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_2, best cost 16.5383 + 2234.05 = 2250.59 over 213 frames.
+test_S21_2_2 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_3, best cost 16.5383 + 2234.67 = 2251.21 over 213 frames.
+test_S21_2_3 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_4, best cost 16.5383 + 2235.64 = 2252.18 over 213 frames.
+test_S21_2_4 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_5, best cost 16.5442 + 2234.88 = 2251.42 over 213 frames.
+test_S21_2_5 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_6, best cost 16.5537 + 2236.36 = 2252.91 over 213 frames.
+test_S21_2_6 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S21_2_7, best cost 16.5136 + 2237.51 = 2254.02 over 213 frames.
+test_S21_2_7 SIL naan quizku poo pooreen SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_1, best cost 19.0092 + 3464.69 = 3483.7 over 325 frames.
+test_S22_1_1 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_2, best cost 19.0092 + 3464.67 = 3483.68 over 325 frames.
+test_S22_1_2 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_3, best cost 19.0092 + 3464.98 = 3483.99 over 325 frames.
+test_S22_1_3 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_4, best cost 19.0165 + 3462.94 = 3481.96 over 325 frames.
+test_S22_1_4 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_5, best cost 19.0092 + 3463.8 = 3482.81 over 325 frames.
+test_S22_1_5 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_6, best cost 19.0092 + 3462.13 = 3481.14 over 325 frames.
+test_S22_1_6 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_1_7, best cost 19.0092 + 3459.49 = 3478.5 over 325 frames.
+test_S22_1_7 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_1, best cost 18.9842 + 3594.75 = 3613.73 over 327 frames.
+test_S22_2_1 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_2, best cost 19.0358 + 3595.67 = 3614.71 over 327 frames.
+test_S22_2_2 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_3, best cost 18.9842 + 3595.61 = 3614.6 over 327 frames.
+test_S22_2_3 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_4, best cost 18.9842 + 3593.34 = 3612.32 over 327 frames.
+test_S22_2_4 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_5, best cost 19.0358 + 3592.76 = 3611.79 over 327 frames.
+test_S22_2_5 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_6, best cost 19.0333 + 3590.89 = 3609.93 over 327 frames.
+test_S22_2_6 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S22_2_7, best cost 18.9842 + 3574.42 = 3593.4 over 327 frames.
+test_S22_2_7 SIL naan kaal keezhae vechchathaan ezhuthirukkamudiyum SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_1, best cost 12.7536 + 1634.3 = 1647.05 over 156 frames.
+test_S2_1_1 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_2, best cost 12.7433 + 1632.73 = 1645.47 over 156 frames.
+test_S2_1_2 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_3, best cost 12.7536 + 1633.96 = 1646.72 over 156 frames.
+test_S2_1_3 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_4, best cost 12.7536 + 1632.72 = 1645.47 over 156 frames.
+test_S2_1_4 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_5, best cost 12.7536 + 1630.55 = 1643.31 over 156 frames.
+test_S2_1_5 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_6, best cost 12.7536 + 1629.83 = 1642.58 over 156 frames.
+test_S2_1_6 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_1_7, best cost 12.733 + 1624.77 = 1637.5 over 156 frames.
+test_S2_1_7 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_1, best cost 12.7236 + 1508.54 = 1521.27 over 144 frames.
+test_S2_2_1 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_2, best cost 12.7239 + 1506.04 = 1518.77 over 144 frames.
+test_S2_2_2 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_3, best cost 12.752 + 1506.24 = 1518.99 over 144 frames.
+test_S2_2_3 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_4, best cost 12.7236 + 1506.24 = 1518.97 over 144 frames.
+test_S2_2_4 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_5, best cost 12.7144 + 1502.72 = 1515.44 over 144 frames.
+test_S2_2_5 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_6, best cost 12.7081 + 1503.02 = 1515.73 over 144 frames.
+test_S2_2_6 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S2_2_7, best cost 12.6144 + 1499.34 = 1511.96 over 144 frames.
+test_S2_2_7 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_1, best cost 20.0158 + 1501.7 = 1521.71 over 146 frames.
+test_S3_1_1 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_2, best cost 20.0158 + 1499.58 = 1519.6 over 146 frames.
+test_S3_1_2 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_3, best cost 20.0158 + 1500.33 = 1520.35 over 146 frames.
+test_S3_1_3 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_4, best cost 20.0055 + 1500.24 = 1520.25 over 146 frames.
+test_S3_1_4 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_5, best cost 20.0055 + 1500.58 = 1520.59 over 146 frames.
+test_S3_1_5 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_6, best cost 20.0055 + 1499.26 = 1519.26 over 146 frames.
+test_S3_1_6 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_1_7, best cost 20.0055 + 1500.61 = 1520.61 over 146 frames.
+test_S3_1_7 SIL thankyoumiss SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_1, best cost 10.6102 + 1562.12 = 1572.73 over 153 frames.
+test_S3_2_1 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_2, best cost 10.6205 + 1560.29 = 1570.91 over 153 frames.
+test_S3_2_2 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_3, best cost 10.6205 + 1560.44 = 1571.06 over 153 frames.
+test_S3_2_3 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_4, best cost 10.6205 + 1564.41 = 1575.03 over 153 frames.
+test_S3_2_4 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_5, best cost 10.5689 + 1559.27 = 1569.84 over 153 frames.
+test_S3_2_5 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_6, best cost 10.6102 + 1559.89 = 1570.5 over 153 frames.
+test_S3_2_6 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S3_2_7, best cost 10.5491 + 1551.85 = 1562.4 over 153 frames.
+test_S3_2_7 SIL thankyoumiss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_1, best cost 13.218 + 1719.94 = 1733.16 over 157 frames.
+test_S4_1_1 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_2, best cost 13.2387 + 1720.24 = 1733.48 over 157 frames.
+test_S4_1_2 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_3, best cost 13.2593 + 1718.57 = 1731.83 over 157 frames.
+test_S4_1_3 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_4, best cost 13.2601 + 1717.16 = 1730.42 over 157 frames.
+test_S4_1_4 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_5, best cost 13.2593 + 1716.38 = 1729.64 over 157 frames.
+test_S4_1_5 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_6, best cost 13.2189 + 1717.01 = 1730.23 over 157 frames.
+test_S4_1_6 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_1_7, best cost 13.2705 + 1714.32 = 1727.59 over 157 frames.
+test_S4_1_7 SIL goodafternoon miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_1, best cost 12.6739 + 1397.1 = 1409.77 over 135 frames.
+test_S4_2_1 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_2, best cost 12.6739 + 1398.26 = 1410.93 over 135 frames.
+test_S4_2_2 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_3, best cost 12.6739 + 1398.43 = 1411.1 over 135 frames.
+test_S4_2_3 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_4, best cost 12.6739 + 1396.65 = 1409.33 over 135 frames.
+test_S4_2_4 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_5, best cost 12.6739 + 1398.21 = 1410.89 over 135 frames.
+test_S4_2_5 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_6, best cost 12.6739 + 1400.49 = 1413.16 over 135 frames.
+test_S4_2_6 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S4_2_7, best cost 12.6739 + 1396.45 = 1409.12 over 135 frames.
+test_S4_2_7 SIL vanthiruken miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_1, best cost 24.0481 + 2061.38 = 2085.43 over 200 frames.
+test_S5_1_1 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_2, best cost 24.0688 + 2061.35 = 2085.42 over 200 frames.
+test_S5_1_2 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_3, best cost 23.9862 + 2057.64 = 2081.63 over 200 frames.
+test_S5_1_3 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-scale:main():lattice-scale.cc:90) Done 308 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_4, best cost 23.9862 + 2055.7 = 2079.68 over 200 frames.
+test_S5_1_4 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_5, best cost 23.9862 + 2058.37 = 2082.35 over 200 frames.
+test_S5_1_5 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_6, best cost 23.9831 + 2056.59 = 2080.58 over 200 frames.
+test_S5_1_6 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_1_7, best cost 23.9418 + 2053.52 = 2077.46 over 200 frames.
+test_S5_1_7 SIL miss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_1, best cost 24.3233 + 2218.53 = 2242.85 over 215 frames.
+test_S5_2_1 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_2, best cost 24.3219 + 2218.47 = 2242.79 over 215 frames.
+test_S5_2_2 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_3, best cost 24.3219 + 2220.28 = 2244.6 over 215 frames.
+test_S5_2_3 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_4, best cost 24.3219 + 2218.89 = 2243.21 over 215 frames.
+test_S5_2_4 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_5, best cost 24.3219 + 2215.61 = 2239.93 over 215 frames.
+test_S5_2_5 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_6, best cost 24.3209 + 2221.25 = 2245.57 over 215 frames.
+test_S5_2_6 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S5_2_7, best cost 24.3219 + 2217.1 = 2241.42 over 215 frames.
+test_S5_2_7 SIL thankyoumiss SIL miss toilet poonoom SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_1, best cost 14.5276 + 2081.81 = 2096.33 over 191 frames.
+test_S6_1_1 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_2, best cost 14.5276 + 2081.59 = 2096.12 over 191 frames.
+test_S6_1_2 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_3, best cost 14.5276 + 2082.34 = 2096.87 over 191 frames.
+test_S6_1_3 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_4, best cost 14.5276 + 2083.64 = 2098.17 over 191 frames.
+test_S6_1_4 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_5, best cost 14.5276 + 2080.37 = 2094.9 over 191 frames.
+test_S6_1_5 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_6, best cost 14.5276 + 2083.51 = 2098.04 over 191 frames.
+test_S6_1_6 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_1_7, best cost 14.5276 + 2077.27 = 2091.79 over 191 frames.
+test_S6_1_7 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_1, best cost 14.1372 + 1695.67 = 1709.8 over 168 frames.
+test_S6_2_1 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_2, best cost 14.1372 + 1694.32 = 1708.46 over 168 frames.
+test_S6_2_2 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_3, best cost 14.1372 + 1694.08 = 1708.22 over 168 frames.
+test_S6_2_3 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_4, best cost 14.1372 + 1695.95 = 1710.08 over 168 frames.
+test_S6_2_4 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_5, best cost 14.1372 + 1693.94 = 1708.07 over 168 frames.
+test_S6_2_5 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_6, best cost 14.1372 + 1694.13 = 1708.26 over 168 frames.
+test_S6_2_6 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S6_2_7, best cost 14.1467 + 1680.59 = 1694.74 over 168 frames.
+test_S6_2_7 SIL appa vanthirukaanga miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_1, best cost 12.4642 + 1496.36 = 1508.83 over 138 frames.
+test_S7_1_1 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_2, best cost 12.4642 + 1496.4 = 1508.86 over 138 frames.
+test_S7_1_2 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_3, best cost 12.465 + 1495.48 = 1507.95 over 138 frames.
+test_S7_1_3 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_4, best cost 12.465 + 1494.55 = 1507.02 over 138 frames.
+test_S7_1_4 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_5, best cost 12.465 + 1494.62 = 1507.08 over 138 frames.
+test_S7_1_5 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_6, best cost 12.465 + 1493.45 = 1505.91 over 138 frames.
+test_S7_1_6 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_1_7, best cost 12.465 + 1489.29 = 1501.76 over 138 frames.
+test_S7_1_7 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_1, best cost 12.412 + 1529.71 = 1542.12 over 142 frames.
+test_S7_2_1 SIL belladichichu miss SIL 
+LOG (lattice-add-penalty:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 308 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_2, best cost 12.412 + 1528.93 = 1541.34 over 142 frames.
+test_S7_2_2 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_3, best cost 12.412 + 1529.71 = 1542.12 over 142 frames.
+test_S7_2_3 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_4, best cost 12.412 + 1529.65 = 1542.06 over 142 frames.
+test_S7_2_4 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_5, best cost 12.412 + 1528.63 = 1541.04 over 142 frames.
+test_S7_2_5 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_6, best cost 12.412 + 1527.02 = 1539.44 over 142 frames.
+test_S7_2_6 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S7_2_7, best cost 12.412 + 1530.45 = 1542.86 over 142 frames.
+test_S7_2_7 SIL belladichichu miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_1, best cost 26.4907 + 3302.01 = 3328.5 over 305 frames.
+test_S8_1_1 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_2, best cost 26.4907 + 3304.37 = 3330.86 over 305 frames.
+test_S8_1_2 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_3, best cost 26.4907 + 3299.93 = 3326.42 over 305 frames.
+test_S8_1_3 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_4, best cost 26.5006 + 3299.04 = 3325.54 over 305 frames.
+test_S8_1_4 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_5, best cost 26.5109 + 3299.67 = 3326.19 over 305 frames.
+test_S8_1_5 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_6, best cost 26.5001 + 3287.65 = 3314.15 over 305 frames.
+test_S8_1_6 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_1_7, best cost 26.5001 + 3274.63 = 3301.13 over 305 frames.
+test_S8_1_7 SIL ariviyal paadam padikalaam SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_1, best cost 14.6501 + 2298.43 = 2313.08 over 213 frames.
+test_S8_2_1 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_2, best cost 14.6501 + 2295.69 = 2310.34 over 213 frames.
+test_S8_2_2 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_3, best cost 14.6501 + 2296.91 = 2311.56 over 213 frames.
+test_S8_2_3 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_4, best cost 14.6501 + 2295.01 = 2309.66 over 213 frames.
+test_S8_2_4 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_5, best cost 14.6501 + 2296.35 = 2311 over 213 frames.
+test_S8_2_5 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_6, best cost 14.6501 + 2295.79 = 2310.44 over 213 frames.
+test_S8_2_6 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S8_2_7, best cost 14.6501 + 2291.88 = 2306.53 over 213 frames.
+test_S8_2_7 SIL ariviyal paadam padikalaam SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_1, best cost 12.2015 + 1325.33 = 1337.53 over 128 frames.
+test_S9_1_1 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_2, best cost 12.2015 + 1319.57 = 1331.77 over 128 frames.
+test_S9_1_2 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_3, best cost 12.2015 + 1321.81 = 1334.02 over 128 frames.
+test_S9_1_3 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_4, best cost 12.2015 + 1319.6 = 1331.8 over 128 frames.
+test_S9_1_4 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_5, best cost 12.2015 + 1313.13 = 1325.33 over 128 frames.
+test_S9_1_5 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_6, best cost 12.2015 + 1306.73 = 1318.94 over 128 frames.
+test_S9_1_6 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_1_7, best cost 12.2015 + 1302.62 = 1314.83 over 128 frames.
+test_S9_1_7 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_1, best cost 12.1313 + 1032.4 = 1044.53 over 102 frames.
+test_S9_2_1 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_2, best cost 12.1107 + 1032.45 = 1044.56 over 102 frames.
+test_S9_2_2 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_3, best cost 12.1107 + 1032.85 = 1044.96 over 102 frames.
+test_S9_2_3 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_4, best cost 12.1107 + 1031.31 = 1043.42 over 102 frames.
+test_S9_2_4 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_5, best cost 12.1107 + 1032.5 = 1044.61 over 102 frames.
+test_S9_2_5 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_6, best cost 12.1107 + 1031.14 = 1043.26 over 102 frames.
+test_S9_2_6 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance test_S9_2_7, best cost 12.1107 + 1033.53 = 1045.64 over 102 frames.
+test_S9_2_7 SIL puriyala miss SIL 
+LOG (lattice-best-path:main():lattice-best-path.cc:124) Overall cost per frame is 10.5646 = 0.0811886 [graph] + 10.4834 [acoustic] over 63532 frames.
+LOG (lattice-best-path:main():lattice-best-path.cc:128) Done 308 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Feb 10 15:33:23 IST 2020, elapsed time 0 seconds

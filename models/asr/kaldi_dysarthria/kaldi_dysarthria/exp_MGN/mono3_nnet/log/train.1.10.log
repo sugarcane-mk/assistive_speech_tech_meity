@@ -1,0 +1,28 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=1 ark:exp/mono3_nnet/egs/egs.10.0.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=1 "nnet-init --srand=1 exp/mono3_nnet/hidden.config - | nnet-insert exp/mono3_nnet/1.mdl - - |" ark:- exp/mono3_nnet/2.10.mdl 
+# Started at Thu Feb 27 15:15:15 IST 2020
+#
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=1 'nnet-init --srand=1 exp/mono3_nnet/hidden.config - | nnet-insert exp/mono3_nnet/1.mdl - - |' ark:- exp/mono3_nnet/2.10.mdl 
+nnet-shuffle-egs --buffer-size=5000 --srand=1 ark:exp/mono3_nnet/egs/egs.10.0.ark ark:- 
+nnet-init --srand=1 exp/mono3_nnet/hidden.config - 
+nnet-insert exp/mono3_nnet/1.mdl - - 
+LOG (nnet-init:main():nnet-init.cc:69) Initialized raw neural net and wrote it to -
+LOG (nnet-insert:main():nnet-insert.cc:106) Inserted 2 components at position 4
+LOG (nnet-insert:main():nnet-insert.cc:122) Randomized component index 6 with stddev 0.0057735
+LOG (nnet-insert:main():nnet-insert.cc:132) Write neural-net acoustic model to -
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.439011, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.421605, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.44259, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.439656, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.435474, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.43805, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.436242, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.446813, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.438047, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.446319, for component index 6
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.450972, for component index 6
+LOG (nnet-shuffle-egs:main():nnet-shuffle-egs.cc:102) Shuffled order of 81167 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 81167 examples, average log-prob per frame is -1.79881
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-1.79881
+LOG (nnet-train-parallel:main():nnet-train-parallel.cc:102) Finished training, processed 81167 training examples (weighted).  Wrote model to exp/mono3_nnet/2.10.mdl
+# Accounting: time=35 threads=1
+# Ended (code 0) at Thu Feb 27 15:15:50 IST 2020, elapsed time 35 seconds

@@ -1,0 +1,1625 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/mono2/graph/words.txt exp/mono2/final.mdl exp/mono2/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split2/1/utt2spk scp:data/test/split2/1/cmvn.scp scp:data/test/split2/1/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/test/split2/1/utt2spk ark:exp/mono2/decode_test/pre_trans.1 ark:- ark:- |" "ark:|gzip -c > exp/mono2/decode_test/lat.tmp.1.gz" 
+# Started at Mon Feb 24 10:01:59 IST 2020
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/mono2/graph/words.txt exp/mono2/final.mdl exp/mono2/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split2/1/utt2spk scp:data/test/split2/1/cmvn.scp scp:data/test/split2/1/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/test/split2/1/utt2spk ark:exp/mono2/decode_test/pre_trans.1 ark:- ark:- |' 'ark:|gzip -c > exp/mono2/decode_test/lat.tmp.1.gz' 
+transform-feats --utt2spk=ark:data/test/split2/1/utt2spk ark:exp/mono2/decode_test/pre_trans.1 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split2/1/utt2spk scp:data/test/split2/1/cmvn.scp scp:data/test/split2/1/feats.scp ark:- 
+add-deltas ark:- ark:- 
+test_S10_1_1_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_1_12 is -7.22256 over 130 frames.
+test_S10_1_1_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_1_14 is -7.2429 over 130 frames.
+test_S10_1_1_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_1_16 is -7.31253 over 130 frames.
+test_S10_1_1_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_1_18 is -7.22997 over 130 frames.
+test_S10_1_1_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_1_20 is -7.24451 over 130 frames.
+test_S10_1_2_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_2_12 is -7.21507 over 130 frames.
+test_S10_1_2_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_2_14 is -7.18847 over 130 frames.
+test_S10_1_2_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_2_16 is -7.19949 over 130 frames.
+test_S10_1_2_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_2_18 is -7.22537 over 130 frames.
+test_S10_1_2_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_2_20 is -7.22964 over 130 frames.
+test_S10_1_3_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_3_12 is -7.24407 over 130 frames.
+test_S10_1_3_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_3_14 is -7.19413 over 130 frames.
+test_S10_1_3_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_3_16 is -7.24248 over 130 frames.
+test_S10_1_3_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_3_18 is -7.21973 over 130 frames.
+test_S10_1_3_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_3_20 is -7.2155 over 130 frames.
+test_S10_1_4_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_4_12 is -7.20212 over 130 frames.
+test_S10_1_4_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_4_14 is -7.19759 over 130 frames.
+test_S10_1_4_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_4_16 is -7.1838 over 130 frames.
+test_S10_1_4_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_4_18 is -7.26507 over 130 frames.
+test_S10_1_4_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_4_20 is -7.21261 over 130 frames.
+test_S10_1_5_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_5_12 is -7.21278 over 130 frames.
+test_S10_1_5_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_5_14 is -7.22399 over 130 frames.
+test_S10_1_5_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_5_16 is -7.16742 over 130 frames.
+test_S10_1_5_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_5_18 is -7.19214 over 130 frames.
+test_S10_1_5_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_5_20 is -7.17784 over 130 frames.
+test_S10_1_6_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_6_12 is -7.15439 over 130 frames.
+test_S10_1_6_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_6_14 is -7.16431 over 130 frames.
+test_S10_1_6_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_6_16 is -7.12362 over 130 frames.
+test_S10_1_6_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_6_18 is -7.23226 over 130 frames.
+test_S10_1_6_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_6_20 is -7.17472 over 130 frames.
+test_S10_1_7_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_7_12 is -7.11926 over 130 frames.
+test_S10_1_7_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_7_14 is -7.15504 over 130 frames.
+test_S10_1_7_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_7_16 is -7.14264 over 130 frames.
+test_S10_1_7_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_7_18 is -7.14609 over 130 frames.
+test_S10_1_7_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_1_7_20 is -7.17723 over 130 frames.
+test_S10_2_1_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_1_12 is -7.28822 over 126 frames.
+test_S10_2_1_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_1_14 is -7.29886 over 126 frames.
+test_S10_2_1_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_1_16 is -7.26844 over 126 frames.
+test_S10_2_1_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_1_18 is -7.27454 over 126 frames.
+test_S10_2_1_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_1_20 is -7.27753 over 126 frames.
+test_S10_2_2_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_2_12 is -7.2762 over 126 frames.
+test_S10_2_2_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_2_14 is -7.28123 over 126 frames.
+test_S10_2_2_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_2_16 is -7.28946 over 126 frames.
+test_S10_2_2_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_2_18 is -7.27865 over 126 frames.
+test_S10_2_2_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_2_20 is -7.27787 over 126 frames.
+test_S10_2_3_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_3_12 is -7.27284 over 126 frames.
+test_S10_2_3_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_3_14 is -7.27725 over 126 frames.
+test_S10_2_3_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_3_16 is -7.27969 over 126 frames.
+test_S10_2_3_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_3_18 is -7.27862 over 126 frames.
+test_S10_2_3_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_3_20 is -7.28329 over 126 frames.
+test_S10_2_4_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_4_12 is -7.28096 over 126 frames.
+test_S10_2_4_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_4_14 is -7.28546 over 126 frames.
+test_S10_2_4_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_4_16 is -7.28309 over 126 frames.
+test_S10_2_4_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_4_18 is -7.27413 over 126 frames.
+test_S10_2_4_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_4_20 is -7.27741 over 126 frames.
+test_S10_2_5_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_5_12 is -7.26993 over 126 frames.
+test_S10_2_5_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_5_14 is -7.26637 over 126 frames.
+test_S10_2_5_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_5_16 is -7.26371 over 126 frames.
+test_S10_2_5_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_5_18 is -7.26443 over 126 frames.
+test_S10_2_5_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_5_20 is -7.2896 over 126 frames.
+test_S10_2_6_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_6_12 is -7.23833 over 126 frames.
+test_S10_2_6_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_6_14 is -7.24819 over 126 frames.
+test_S10_2_6_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_6_16 is -7.26479 over 126 frames.
+test_S10_2_6_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_6_18 is -7.2613 over 126 frames.
+test_S10_2_6_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_6_20 is -7.27605 over 126 frames.
+test_S10_2_7_12 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_7_12 is -7.2892 over 126 frames.
+test_S10_2_7_14 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_7_14 is -7.29581 over 126 frames.
+test_S10_2_7_16 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_7_16 is -7.28985 over 126 frames.
+test_S10_2_7_18 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_7_18 is -7.2675 over 126 frames.
+test_S10_2_7_20 SIL vera ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S10_2_7_20 is -7.2732 over 126 frames.
+test_S11_1_1_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_1_12 is -6.44064 over 129 frames.
+test_S11_1_1_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_1_14 is -6.4484 over 129 frames.
+test_S11_1_1_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_1_16 is -6.43634 over 129 frames.
+test_S11_1_1_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_1_18 is -6.4538 over 129 frames.
+test_S11_1_1_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_1_20 is -6.44754 over 129 frames.
+test_S11_1_2_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_2_12 is -6.44911 over 129 frames.
+test_S11_1_2_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_2_14 is -6.44698 over 129 frames.
+test_S11_1_2_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_2_16 is -6.44466 over 129 frames.
+test_S11_1_2_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_2_18 is -6.45088 over 129 frames.
+test_S11_1_2_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_2_20 is -6.44701 over 129 frames.
+test_S11_1_3_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_3_12 is -6.44558 over 129 frames.
+test_S11_1_3_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_3_14 is -6.44236 over 129 frames.
+test_S11_1_3_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_3_16 is -6.44257 over 129 frames.
+test_S11_1_3_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_3_18 is -6.45552 over 129 frames.
+test_S11_1_3_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_3_20 is -6.44463 over 129 frames.
+test_S11_1_4_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_4_12 is -6.44075 over 129 frames.
+test_S11_1_4_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_4_14 is -6.4452 over 129 frames.
+test_S11_1_4_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_4_16 is -6.45068 over 129 frames.
+test_S11_1_4_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_4_18 is -6.44814 over 129 frames.
+test_S11_1_4_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_4_20 is -6.44522 over 129 frames.
+test_S11_1_5_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_5_12 is -6.4472 over 129 frames.
+test_S11_1_5_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_5_14 is -6.43364 over 129 frames.
+test_S11_1_5_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_5_16 is -6.44363 over 129 frames.
+test_S11_1_5_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_5_18 is -6.43665 over 129 frames.
+test_S11_1_5_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_5_20 is -6.44282 over 129 frames.
+test_S11_1_6_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_6_12 is -6.44436 over 129 frames.
+test_S11_1_6_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_6_14 is -6.45187 over 129 frames.
+test_S11_1_6_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_6_16 is -6.4658 over 129 frames.
+test_S11_1_6_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_6_18 is -6.43705 over 129 frames.
+test_S11_1_6_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_6_20 is -6.462 over 129 frames.
+test_S11_1_7_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_7_12 is -6.47172 over 129 frames.
+test_S11_1_7_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_7_14 is -6.43981 over 129 frames.
+test_S11_1_7_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_7_16 is -6.44393 over 129 frames.
+test_S11_1_7_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_7_18 is -6.44045 over 129 frames.
+test_S11_1_7_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_1_7_20 is -6.41845 over 129 frames.
+test_S11_2_1_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_1_12 is -6.61105 over 130 frames.
+test_S11_2_1_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_1_14 is -6.62249 over 130 frames.
+test_S11_2_1_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_1_16 is -6.61786 over 130 frames.
+test_S11_2_1_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_1_18 is -6.61454 over 130 frames.
+test_S11_2_1_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_1_20 is -6.61963 over 130 frames.
+test_S11_2_2_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_2_12 is -6.62218 over 130 frames.
+test_S11_2_2_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_2_14 is -6.61558 over 130 frames.
+test_S11_2_2_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_2_16 is -6.60703 over 130 frames.
+test_S11_2_2_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_2_18 is -6.62615 over 130 frames.
+test_S11_2_2_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_2_20 is -6.61278 over 130 frames.
+test_S11_2_3_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_3_12 is -6.62527 over 130 frames.
+test_S11_2_3_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_3_14 is -6.61378 over 130 frames.
+test_S11_2_3_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_3_16 is -6.62368 over 130 frames.
+test_S11_2_3_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_3_18 is -6.61178 over 130 frames.
+test_S11_2_3_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_3_20 is -6.61362 over 130 frames.
+test_S11_2_4_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_4_12 is -6.60473 over 130 frames.
+test_S11_2_4_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_4_14 is -6.61439 over 130 frames.
+test_S11_2_4_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_4_16 is -6.58285 over 130 frames.
+test_S11_2_4_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_4_18 is -6.62495 over 130 frames.
+test_S11_2_4_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_4_20 is -6.58388 over 130 frames.
+test_S11_2_5_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_5_12 is -6.60132 over 130 frames.
+test_S11_2_5_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_5_14 is -6.59902 over 130 frames.
+test_S11_2_5_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_5_16 is -6.61572 over 130 frames.
+test_S11_2_5_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_5_18 is -6.61146 over 130 frames.
+test_S11_2_5_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_5_20 is -6.62163 over 130 frames.
+test_S11_2_6_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_6_12 is -6.60499 over 130 frames.
+test_S11_2_6_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_6_14 is -6.60331 over 130 frames.
+test_S11_2_6_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_6_16 is -6.61034 over 130 frames.
+test_S11_2_6_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_6_18 is -6.64088 over 130 frames.
+test_S11_2_6_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_6_20 is -6.64973 over 130 frames.
+test_S11_2_7_12 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_7_12 is -6.59921 over 130 frames.
+test_S11_2_7_14 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_7_14 is -6.5942 over 130 frames.
+test_S11_2_7_16 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_7_16 is -6.61229 over 130 frames.
+test_S11_2_7_18 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_7_18 is -6.55853 over 130 frames.
+test_S11_2_7_20 SIL vera ennannaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S11_2_7_20 is -6.59764 over 130 frames.
+test_S12_1_1_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_1_12 is -7.28509 over 189 frames.
+test_S12_1_1_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_1_14 is -7.27778 over 189 frames.
+test_S12_1_1_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_1_16 is -7.27834 over 189 frames.
+test_S12_1_1_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_1_18 is -7.28836 over 189 frames.
+test_S12_1_1_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_1_20 is -7.28943 over 189 frames.
+test_S12_1_2_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_2_12 is -7.28565 over 189 frames.
+test_S12_1_2_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_2_14 is -7.28219 over 189 frames.
+test_S12_1_2_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_2_16 is -7.28208 over 189 frames.
+test_S12_1_2_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_2_18 is -7.27484 over 189 frames.
+test_S12_1_2_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_2_20 is -7.28624 over 189 frames.
+test_S12_1_3_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_3_12 is -7.28683 over 189 frames.
+test_S12_1_3_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_3_14 is -7.27986 over 189 frames.
+test_S12_1_3_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_3_16 is -7.28477 over 189 frames.
+test_S12_1_3_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_3_18 is -7.27687 over 189 frames.
+test_S12_1_3_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_3_20 is -7.28771 over 189 frames.
+test_S12_1_4_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_4_12 is -7.27226 over 189 frames.
+test_S12_1_4_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_4_14 is -7.27995 over 189 frames.
+test_S12_1_4_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_4_16 is -7.29307 over 189 frames.
+test_S12_1_4_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_4_18 is -7.2893 over 189 frames.
+test_S12_1_4_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_4_20 is -7.29164 over 189 frames.
+test_S12_1_5_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_5_12 is -7.27611 over 189 frames.
+test_S12_1_5_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_5_14 is -7.28096 over 189 frames.
+test_S12_1_5_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_5_16 is -7.27492 over 189 frames.
+test_S12_1_5_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_5_18 is -7.27746 over 189 frames.
+test_S12_1_5_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_5_20 is -7.28858 over 189 frames.
+test_S12_1_6_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_6_12 is -7.27588 over 189 frames.
+test_S12_1_6_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_6_14 is -7.28322 over 189 frames.
+test_S12_1_6_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_6_16 is -7.27535 over 189 frames.
+test_S12_1_6_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_6_18 is -7.28246 over 189 frames.
+test_S12_1_6_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_6_20 is -7.29299 over 189 frames.
+test_S12_1_7_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_7_12 is -7.27629 over 189 frames.
+test_S12_1_7_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_7_14 is -7.30676 over 189 frames.
+test_S12_1_7_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_7_16 is -7.26597 over 189 frames.
+test_S12_1_7_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_7_18 is -7.29522 over 189 frames.
+test_S12_1_7_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_1_7_20 is -7.2644 over 189 frames.
+test_S12_2_1_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_1_12 is -6.95569 over 113 frames.
+test_S12_2_1_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_1_14 is -6.95305 over 113 frames.
+test_S12_2_1_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_1_16 is -6.95808 over 113 frames.
+test_S12_2_1_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_1_18 is -6.96823 over 113 frames.
+test_S12_2_1_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_1_20 is -6.96866 over 113 frames.
+test_S12_2_2_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_2_12 is -6.95232 over 113 frames.
+test_S12_2_2_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_2_14 is -6.9531 over 113 frames.
+test_S12_2_2_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_2_16 is -6.95667 over 113 frames.
+test_S12_2_2_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_2_18 is -6.9675 over 113 frames.
+test_S12_2_2_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_2_20 is -6.95892 over 113 frames.
+test_S12_2_3_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_3_12 is -6.96217 over 113 frames.
+test_S12_2_3_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_3_14 is -6.95213 over 113 frames.
+test_S12_2_3_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_3_16 is -6.95419 over 113 frames.
+test_S12_2_3_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_3_18 is -6.96524 over 113 frames.
+test_S12_2_3_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_3_20 is -6.96162 over 113 frames.
+test_S12_2_4_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_4_12 is -6.95926 over 113 frames.
+test_S12_2_4_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_4_14 is -6.95232 over 113 frames.
+test_S12_2_4_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_4_16 is -6.96155 over 113 frames.
+test_S12_2_4_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_4_18 is -6.95425 over 113 frames.
+test_S12_2_4_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_4_20 is -6.96636 over 113 frames.
+test_S12_2_5_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_5_12 is -6.9737 over 113 frames.
+test_S12_2_5_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_5_14 is -6.92252 over 113 frames.
+test_S12_2_5_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_5_16 is -6.96912 over 113 frames.
+test_S12_2_5_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_5_18 is -6.95444 over 113 frames.
+test_S12_2_5_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_5_20 is -6.92641 over 113 frames.
+test_S12_2_6_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_6_12 is -6.9341 over 113 frames.
+test_S12_2_6_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_6_14 is -6.91857 over 113 frames.
+test_S12_2_6_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_6_16 is -6.93001 over 113 frames.
+test_S12_2_6_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_6_18 is -6.95873 over 113 frames.
+test_S12_2_6_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_6_20 is -6.90578 over 113 frames.
+test_S12_2_7_12 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_7_12 is -6.93823 over 113 frames.
+test_S12_2_7_14 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_7_14 is -6.90202 over 113 frames.
+test_S12_2_7_16 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_7_16 is -6.89724 over 113 frames.
+test_S12_2_7_18 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_7_18 is -6.9558 over 113 frames.
+test_S12_2_7_20 SIL vera ennapaappaa veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S12_2_7_20 is -6.91636 over 113 frames.
+test_S13_6_1_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_1_12 is -7.284 over 261 frames.
+test_S13_6_1_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_1_14 is -7.29723 over 261 frames.
+test_S13_6_1_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_1_16 is -7.27411 over 261 frames.
+test_S13_6_1_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_1_18 is -7.27705 over 261 frames.
+test_S13_6_1_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_1_20 is -7.29382 over 261 frames.
+test_S13_6_2_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_2_12 is -7.27785 over 261 frames.
+test_S13_6_2_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_2_14 is -7.27131 over 261 frames.
+test_S13_6_2_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_2_16 is -7.27168 over 261 frames.
+test_S13_6_2_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_2_18 is -7.26279 over 261 frames.
+test_S13_6_2_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_2_20 is -7.2886 over 261 frames.
+test_S13_6_3_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_3_12 is -7.29309 over 261 frames.
+test_S13_6_3_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_3_14 is -7.27687 over 261 frames.
+test_S13_6_3_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_3_16 is -7.27544 over 261 frames.
+test_S13_6_3_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_3_18 is -7.27316 over 261 frames.
+test_S13_6_3_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_3_20 is -7.26859 over 261 frames.
+test_S13_6_4_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_4_12 is -7.27504 over 261 frames.
+test_S13_6_4_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_4_14 is -7.27065 over 261 frames.
+test_S13_6_4_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_4_16 is -7.26709 over 261 frames.
+test_S13_6_4_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_4_18 is -7.28749 over 261 frames.
+test_S13_6_4_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_4_20 is -7.27108 over 261 frames.
+test_S13_6_5_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_5_12 is -7.28044 over 261 frames.
+test_S13_6_5_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_5_14 is -7.27557 over 261 frames.
+test_S13_6_5_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_5_16 is -7.2839 over 261 frames.
+test_S13_6_5_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_5_18 is -7.27251 over 261 frames.
+test_S13_6_5_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_5_20 is -7.2753 over 261 frames.
+test_S13_6_6_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_6_12 is -7.25111 over 261 frames.
+test_S13_6_6_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_6_14 is -7.26914 over 261 frames.
+test_S13_6_6_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_6_16 is -7.28604 over 261 frames.
+test_S13_6_6_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_6_18 is -7.25464 over 261 frames.
+test_S13_6_6_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_6_20 is -7.25579 over 261 frames.
+test_S13_6_7_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_7_12 is -7.24122 over 261 frames.
+test_S13_6_7_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_7_14 is -7.25798 over 261 frames.
+test_S13_6_7_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_7_16 is -7.2223 over 261 frames.
+test_S13_6_7_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_7_18 is -7.25559 over 261 frames.
+test_S13_6_7_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_6_7_20 is -7.23128 over 261 frames.
+test_S13_7_1_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_1_12 is -7.65267 over 294 frames.
+test_S13_7_1_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_1_14 is -7.63249 over 294 frames.
+test_S13_7_1_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_1_16 is -7.64935 over 294 frames.
+test_S13_7_1_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_1_18 is -7.65547 over 294 frames.
+test_S13_7_1_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_1_20 is -7.64573 over 294 frames.
+test_S13_7_2_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_2_12 is -7.63845 over 294 frames.
+test_S13_7_2_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_2_14 is -7.6346 over 294 frames.
+test_S13_7_2_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_2_16 is -7.63249 over 294 frames.
+test_S13_7_2_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_2_18 is -7.65559 over 294 frames.
+test_S13_7_2_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_2_20 is -7.63942 over 294 frames.
+test_S13_7_3_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_3_12 is -7.63932 over 294 frames.
+test_S13_7_3_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_3_14 is -7.64277 over 294 frames.
+test_S13_7_3_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_3_16 is -7.64637 over 294 frames.
+test_S13_7_3_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_3_18 is -7.62746 over 294 frames.
+test_S13_7_3_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_3_20 is -7.64202 over 294 frames.
+test_S13_7_4_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_4_12 is -7.6268 over 294 frames.
+test_S13_7_4_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_4_14 is -7.62898 over 294 frames.
+test_S13_7_4_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_4_16 is -7.64171 over 294 frames.
+test_S13_7_4_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_4_18 is -7.6422 over 294 frames.
+test_S13_7_4_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_4_20 is -7.63922 over 294 frames.
+test_S13_7_5_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_5_12 is -7.63173 over 294 frames.
+test_S13_7_5_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_5_14 is -7.65267 over 294 frames.
+test_S13_7_5_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_5_16 is -7.61391 over 294 frames.
+test_S13_7_5_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_5_18 is -7.63324 over 294 frames.
+test_S13_7_5_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_5_20 is -7.64977 over 294 frames.
+test_S13_7_6_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_6_12 is -7.6133 over 294 frames.
+test_S13_7_6_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_6_14 is -7.60869 over 294 frames.
+test_S13_7_6_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_6_16 is -7.62466 over 294 frames.
+test_S13_7_6_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_6_18 is -7.61901 over 294 frames.
+test_S13_7_6_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_6_20 is -7.60471 over 294 frames.
+test_S13_7_7_12 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_7_12 is -7.58686 over 294 frames.
+test_S13_7_7_14 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_7_14 is -7.60364 over 294 frames.
+test_S13_7_7_16 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_7_16 is -7.59476 over 294 frames.
+test_S13_7_7_18 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_7_18 is -7.57431 over 294 frames.
+test_S13_7_7_20 SIL inikkeuillainggaka naalikku vanthuvaangikkongaka SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S13_7_7_20 is -7.60796 over 294 frames.
+test_S14_4_1_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_1_12 is -7.27372 over 251 frames.
+test_S14_4_1_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_1_14 is -7.2569 over 251 frames.
+test_S14_4_1_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_1_16 is -7.26166 over 251 frames.
+test_S14_4_1_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_1_18 is -7.27108 over 251 frames.
+test_S14_4_1_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_1_20 is -7.27402 over 251 frames.
+test_S14_4_2_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_2_12 is -7.27911 over 251 frames.
+test_S14_4_2_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_2_14 is -7.27243 over 251 frames.
+test_S14_4_2_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_2_16 is -7.2797 over 251 frames.
+test_S14_4_2_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_2_18 is -7.26831 over 251 frames.
+test_S14_4_2_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_2_20 is -7.25736 over 251 frames.
+test_S14_4_3_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_3_12 is -7.2771 over 251 frames.
+test_S14_4_3_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_3_14 is -7.26684 over 251 frames.
+test_S14_4_3_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_3_16 is -7.25999 over 251 frames.
+test_S14_4_3_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_3_18 is -7.27627 over 251 frames.
+test_S14_4_3_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_3_20 is -7.27259 over 251 frames.
+test_S14_4_4_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_4_12 is -7.24693 over 251 frames.
+test_S14_4_4_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_4_14 is -7.28717 over 251 frames.
+test_S14_4_4_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_4_16 is -7.2662 over 251 frames.
+test_S14_4_4_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_4_18 is -7.24549 over 251 frames.
+test_S14_4_4_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_4_20 is -7.26549 over 251 frames.
+test_S14_4_5_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_5_12 is -7.27436 over 251 frames.
+test_S14_4_5_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_5_14 is -7.27146 over 251 frames.
+test_S14_4_5_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_5_16 is -7.26261 over 251 frames.
+test_S14_4_5_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_5_18 is -7.24118 over 251 frames.
+test_S14_4_5_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_5_20 is -7.28338 over 251 frames.
+test_S14_4_6_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_6_12 is -7.26546 over 251 frames.
+test_S14_4_6_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_6_14 is -7.26263 over 251 frames.
+test_S14_4_6_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_6_16 is -7.2657 over 251 frames.
+test_S14_4_6_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_6_18 is -7.26016 over 251 frames.
+test_S14_4_6_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_6_20 is -7.28249 over 251 frames.
+test_S14_4_7_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_7_12 is -7.28395 over 251 frames.
+test_S14_4_7_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_7_14 is -7.27043 over 251 frames.
+test_S14_4_7_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_7_16 is -7.26255 over 251 frames.
+test_S14_4_7_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_7_18 is -7.27527 over 251 frames.
+test_S14_4_7_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_4_7_20 is -7.26151 over 251 frames.
+test_S14_5_1_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_1_12 is -6.93268 over 248 frames.
+test_S14_5_1_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_1_14 is -6.95132 over 248 frames.
+test_S14_5_1_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_1_16 is -6.92754 over 248 frames.
+test_S14_5_1_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_1_18 is -6.91492 over 248 frames.
+test_S14_5_1_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_1_20 is -6.93362 over 248 frames.
+test_S14_5_2_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_2_12 is -6.90688 over 248 frames.
+test_S14_5_2_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_2_14 is -6.93535 over 248 frames.
+test_S14_5_2_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_2_16 is -6.93642 over 248 frames.
+test_S14_5_2_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_2_18 is -6.92141 over 248 frames.
+test_S14_5_2_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_2_20 is -6.92062 over 248 frames.
+test_S14_5_3_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_3_12 is -6.93914 over 248 frames.
+test_S14_5_3_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_3_14 is -6.91506 over 248 frames.
+test_S14_5_3_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_3_16 is -6.91912 over 248 frames.
+test_S14_5_3_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_3_18 is -6.94105 over 248 frames.
+test_S14_5_3_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_3_20 is -6.9102 over 248 frames.
+test_S14_5_4_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_4_12 is -6.91611 over 248 frames.
+test_S14_5_4_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_4_14 is -6.92944 over 248 frames.
+test_S14_5_4_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_4_16 is -6.91496 over 248 frames.
+test_S14_5_4_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_4_18 is -6.93951 over 248 frames.
+test_S14_5_4_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_4_20 is -6.90568 over 248 frames.
+test_S14_5_5_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_5_12 is -6.91891 over 248 frames.
+test_S14_5_5_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_5_14 is -6.9279 over 248 frames.
+test_S14_5_5_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_5_16 is -6.89937 over 248 frames.
+test_S14_5_5_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_5_18 is -6.91044 over 248 frames.
+test_S14_5_5_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_5_20 is -6.89942 over 248 frames.
+test_S14_5_6_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_6_12 is -6.89842 over 248 frames.
+test_S14_5_6_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_6_14 is -6.9276 over 248 frames.
+test_S14_5_6_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_6_16 is -6.94454 over 248 frames.
+test_S14_5_6_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_6_18 is -6.91223 over 248 frames.
+test_S14_5_6_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_6_20 is -6.92719 over 248 frames.
+test_S14_5_7_12 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_7_12 is -6.91137 over 248 frames.
+test_S14_5_7_14 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_7_14 is -6.91269 over 248 frames.
+test_S14_5_7_16 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_7_16 is -6.91325 over 248 frames.
+test_S14_5_7_18 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_7_18 is -6.94117 over 248 frames.
+test_S14_5_7_20 SIL athapatthi theriyaathu athanaala appaakittakeettukongga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S14_5_7_20 is -6.87563 over 248 frames.
+test_S15_1_1_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_1_12 is -7.55694 over 225 frames.
+test_S15_1_1_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_1_14 is -7.56062 over 225 frames.
+test_S15_1_1_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_1_16 is -7.5848 over 225 frames.
+test_S15_1_1_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_1_18 is -7.56453 over 225 frames.
+test_S15_1_1_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_1_20 is -7.57923 over 225 frames.
+test_S15_1_2_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_2_12 is -7.58309 over 225 frames.
+test_S15_1_2_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_2_14 is -7.58025 over 225 frames.
+test_S15_1_2_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_2_16 is -7.55884 over 225 frames.
+test_S15_1_2_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_2_18 is -7.60869 over 225 frames.
+test_S15_1_2_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_2_20 is -7.57864 over 225 frames.
+test_S15_1_3_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_3_12 is -7.55054 over 225 frames.
+test_S15_1_3_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_3_14 is -7.55008 over 225 frames.
+test_S15_1_3_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_3_16 is -7.56057 over 225 frames.
+test_S15_1_3_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_3_18 is -7.56001 over 225 frames.
+test_S15_1_3_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_3_20 is -7.58508 over 225 frames.
+test_S15_1_4_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_4_12 is -7.55708 over 225 frames.
+test_S15_1_4_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_4_14 is -7.55677 over 225 frames.
+test_S15_1_4_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_4_16 is -7.56188 over 225 frames.
+test_S15_1_4_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_4_18 is -7.53923 over 225 frames.
+test_S15_1_4_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_4_20 is -7.55134 over 225 frames.
+test_S15_1_5_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_5_12 is -7.55083 over 225 frames.
+test_S15_1_5_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_5_14 is -7.5437 over 225 frames.
+test_S15_1_5_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_5_16 is -7.5683 over 225 frames.
+test_S15_1_5_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_5_18 is -7.54245 over 225 frames.
+test_S15_1_5_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_5_20 is -7.54074 over 225 frames.
+test_S15_1_6_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_6_12 is -7.50453 over 225 frames.
+test_S15_1_6_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_6_14 is -7.5244 over 225 frames.
+test_S15_1_6_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_6_16 is -7.53103 over 225 frames.
+test_S15_1_6_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_6_18 is -7.53621 over 225 frames.
+test_S15_1_6_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_6_20 is -7.5366 over 225 frames.
+test_S15_1_7_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_7_12 is -7.5083 over 225 frames.
+test_S15_1_7_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_7_14 is -7.48517 over 225 frames.
+test_S15_1_7_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_7_16 is -7.51698 over 225 frames.
+test_S15_1_7_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_7_18 is -7.49071 over 225 frames.
+test_S15_1_7_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_1_7_20 is -7.48455 over 225 frames.
+test_S15_2_1_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_1_12 is -7.44178 over 203 frames.
+test_S15_2_1_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_1_14 is -7.44441 over 203 frames.
+test_S15_2_1_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_1_16 is -7.44893 over 203 frames.
+test_S15_2_1_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_1_18 is -7.4469 over 203 frames.
+test_S15_2_1_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_1_20 is -7.44998 over 203 frames.
+test_S15_2_2_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_2_12 is -7.45533 over 203 frames.
+test_S15_2_2_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_2_14 is -7.43398 over 203 frames.
+test_S15_2_2_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_2_16 is -7.44768 over 203 frames.
+test_S15_2_2_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_2_18 is -7.44206 over 203 frames.
+test_S15_2_2_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_2_20 is -7.45187 over 203 frames.
+test_S15_2_3_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_3_12 is -7.4362 over 203 frames.
+test_S15_2_3_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_3_14 is -7.4491 over 203 frames.
+test_S15_2_3_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_3_16 is -7.44604 over 203 frames.
+test_S15_2_3_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_3_18 is -7.43898 over 203 frames.
+test_S15_2_3_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_3_20 is -7.44881 over 203 frames.
+test_S15_2_4_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_4_12 is -7.44469 over 203 frames.
+test_S15_2_4_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_4_14 is -7.42928 over 203 frames.
+test_S15_2_4_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_4_16 is -7.45177 over 203 frames.
+test_S15_2_4_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_4_18 is -7.4546 over 203 frames.
+test_S15_2_4_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_4_20 is -7.4349 over 203 frames.
+test_S15_2_5_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_5_12 is -7.44471 over 203 frames.
+test_S15_2_5_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_5_14 is -7.44976 over 203 frames.
+test_S15_2_5_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_5_16 is -7.44251 over 203 frames.
+test_S15_2_5_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_5_18 is -7.44744 over 203 frames.
+test_S15_2_5_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_5_20 is -7.4349 over 203 frames.
+test_S15_2_6_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_6_12 is -7.42964 over 203 frames.
+test_S15_2_6_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_6_14 is -7.43342 over 203 frames.
+test_S15_2_6_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_6_16 is -7.44028 over 203 frames.
+test_S15_2_6_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_6_18 is -7.43628 over 203 frames.
+test_S15_2_6_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_6_20 is -7.43501 over 203 frames.
+test_S15_2_7_12 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_7_12 is -7.45185 over 203 frames.
+test_S15_2_7_14 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_7_14 is -7.40778 over 203 frames.
+test_S15_2_7_16 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_7_16 is -7.4184 over 203 frames.
+test_S15_2_7_18 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_7_18 is -7.41993 over 203 frames.
+test_S15_2_7_20 SIL waitpannunggaka ammakitta keettuvaren SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S15_2_7_20 is -7.44778 over 203 frames.
+test_S16_1_1_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_1_12 is -7.55166 over 337 frames.
+test_S16_1_1_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_1_14 is -7.53419 over 337 frames.
+test_S16_1_1_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_1_16 is -7.54763 over 337 frames.
+test_S16_1_1_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_1_18 is -7.56184 over 337 frames.
+test_S16_1_1_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_1_20 is -7.537 over 337 frames.
+test_S16_1_2_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_2_12 is -7.55512 over 337 frames.
+test_S16_1_2_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_2_14 is -7.54763 over 337 frames.
+test_S16_1_2_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_2_16 is -7.54794 over 337 frames.
+test_S16_1_2_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_2_18 is -7.54331 over 337 frames.
+test_S16_1_2_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_2_20 is -7.54495 over 337 frames.
+test_S16_1_3_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_3_12 is -7.54619 over 337 frames.
+test_S16_1_3_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_3_14 is -7.5493 over 337 frames.
+test_S16_1_3_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_3_16 is -7.572 over 337 frames.
+test_S16_1_3_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_3_18 is -7.55769 over 337 frames.
+test_S16_1_3_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_3_20 is -7.53975 over 337 frames.
+test_S16_1_4_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_4_12 is -7.52569 over 337 frames.
+test_S16_1_4_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_4_14 is -7.55326 over 337 frames.
+test_S16_1_4_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_4_16 is -7.53876 over 337 frames.
+test_S16_1_4_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_4_18 is -7.54265 over 337 frames.
+test_S16_1_4_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_4_20 is -7.5337 over 337 frames.
+test_S16_1_5_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_5_12 is -7.55559 over 337 frames.
+test_S16_1_5_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_5_14 is -7.52721 over 337 frames.
+test_S16_1_5_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_5_16 is -7.53164 over 337 frames.
+test_S16_1_5_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_5_18 is -7.54525 over 337 frames.
+test_S16_1_5_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_5_20 is -7.53108 over 337 frames.
+test_S16_1_6_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_6_12 is -7.52386 over 337 frames.
+test_S16_1_6_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_6_14 is -7.53953 over 337 frames.
+test_S16_1_6_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_6_16 is -7.51148 over 337 frames.
+test_S16_1_6_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_6_18 is -7.49805 over 337 frames.
+test_S16_1_6_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_6_20 is -7.52158 over 337 frames.
+test_S16_1_7_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_7_12 is -7.53467 over 337 frames.
+test_S16_1_7_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_7_14 is -7.49835 over 337 frames.
+test_S16_1_7_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_7_16 is -7.51224 over 337 frames.
+test_S16_1_7_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_7_18 is -7.50306 over 337 frames.
+test_S16_1_7_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_1_7_20 is -7.51023 over 337 frames.
+test_S16_2_1_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_1_12 is -7.49504 over 316 frames.
+test_S16_2_1_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_1_14 is -7.49707 over 316 frames.
+test_S16_2_1_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_1_16 is -7.50309 over 316 frames.
+test_S16_2_1_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_1_18 is -7.49208 over 316 frames.
+test_S16_2_1_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_1_20 is -7.50893 over 316 frames.
+test_S16_2_2_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_2_12 is -7.49637 over 316 frames.
+test_S16_2_2_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_2_14 is -7.49586 over 316 frames.
+test_S16_2_2_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_2_16 is -7.4939 over 316 frames.
+test_S16_2_2_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_2_18 is -7.50588 over 316 frames.
+test_S16_2_2_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_2_20 is -7.49699 over 316 frames.
+test_S16_2_3_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_3_12 is -7.50877 over 316 frames.
+test_S16_2_3_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_3_14 is -7.51269 over 316 frames.
+test_S16_2_3_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_3_16 is -7.51211 over 316 frames.
+test_S16_2_3_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_3_18 is -7.49937 over 316 frames.
+test_S16_2_3_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_3_20 is -7.50605 over 316 frames.
+test_S16_2_4_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_4_12 is -7.49973 over 316 frames.
+test_S16_2_4_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_4_14 is -7.51108 over 316 frames.
+test_S16_2_4_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_4_16 is -7.50891 over 316 frames.
+test_S16_2_4_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_4_18 is -7.49343 over 316 frames.
+test_S16_2_4_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_4_20 is -7.50016 over 316 frames.
+test_S16_2_5_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_5_12 is -7.49857 over 316 frames.
+test_S16_2_5_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_5_14 is -7.49898 over 316 frames.
+test_S16_2_5_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_5_16 is -7.52721 over 316 frames.
+test_S16_2_5_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_5_18 is -7.50763 over 316 frames.
+test_S16_2_5_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_5_20 is -7.51947 over 316 frames.
+test_S16_2_6_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_6_12 is -7.50019 over 316 frames.
+test_S16_2_6_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_6_14 is -7.51007 over 316 frames.
+test_S16_2_6_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_6_16 is -7.51213 over 316 frames.
+test_S16_2_6_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_6_18 is -7.50974 over 316 frames.
+test_S16_2_6_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_6_20 is -7.47013 over 316 frames.
+test_S16_2_7_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_7_12 is -7.52171 over 316 frames.
+test_S16_2_7_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_7_14 is -7.48948 over 316 frames.
+test_S16_2_7_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_7_16 is -7.4768 over 316 frames.
+test_S16_2_7_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_7_18 is -7.48386 over 316 frames.
+test_S16_2_7_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S16_2_7_20 is -7.49449 over 316 frames.
+test_S17_1_1_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_1_12 is -7.55978 over 274 frames.
+test_S17_1_1_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_1_14 is -7.57119 over 274 frames.
+test_S17_1_1_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_1_16 is -7.57026 over 274 frames.
+test_S17_1_1_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_1_18 is -7.5561 over 274 frames.
+test_S17_1_1_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_1_20 is -7.56623 over 274 frames.
+test_S17_1_2_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_2_12 is -7.53934 over 274 frames.
+test_S17_1_2_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_2_14 is -7.56673 over 274 frames.
+test_S17_1_2_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_2_16 is -7.55867 over 274 frames.
+test_S17_1_2_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_2_18 is -7.56082 over 274 frames.
+test_S17_1_2_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_2_20 is -7.56445 over 274 frames.
+test_S17_1_3_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_3_12 is -7.56861 over 274 frames.
+test_S17_1_3_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_3_14 is -7.57658 over 274 frames.
+test_S17_1_3_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_3_16 is -7.55983 over 274 frames.
+test_S17_1_3_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_3_18 is -7.5578 over 274 frames.
+test_S17_1_3_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_3_20 is -7.55273 over 274 frames.
+test_S17_1_4_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_4_12 is -7.55217 over 274 frames.
+test_S17_1_4_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_4_14 is -7.54093 over 274 frames.
+test_S17_1_4_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_4_16 is -7.55581 over 274 frames.
+test_S17_1_4_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_4_18 is -7.57133 over 274 frames.
+test_S17_1_4_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_4_20 is -7.54374 over 274 frames.
+test_S17_1_5_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_5_12 is -7.55093 over 274 frames.
+test_S17_1_5_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_5_14 is -7.53484 over 274 frames.
+test_S17_1_5_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_5_16 is -7.53822 over 274 frames.
+test_S17_1_5_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_5_18 is -7.51532 over 274 frames.
+test_S17_1_5_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_5_20 is -7.53345 over 274 frames.
+test_S17_1_6_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_6_12 is -7.52456 over 274 frames.
+test_S17_1_6_14 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_6_14 is -7.51918 over 274 frames.
+test_S17_1_6_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_6_16 is -7.51876 over 274 frames.
+test_S17_1_6_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_6_18 is -7.52644 over 274 frames.
+test_S17_1_6_20 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_6_20 is -7.53976 over 274 frames.
+test_S17_1_7_12 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_7_12 is -7.48415 over 274 frames.
+test_S17_1_7_14 SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_7_14 is -7.46903 over 274 frames.
+test_S17_1_7_16 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_7_16 is -7.4948 over 274 frames.
+test_S17_1_7_18 SIL kaalaiyilaaarumanilairundeu nightpadinonneumanivarairukkum SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_7_18 is -7.48032 over 274 frames.
+test_S17_1_7_20 SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_1_7_20 is -7.48477 over 274 frames.
+test_S17_2_1_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_1_12 is -7.16897 over 227 frames.
+test_S17_2_1_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_1_14 is -7.16274 over 227 frames.
+test_S17_2_1_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_1_16 is -7.16519 over 227 frames.
+test_S17_2_1_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_1_18 is -7.16997 over 227 frames.
+test_S17_2_1_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_1_20 is -7.16682 over 227 frames.
+test_S17_2_2_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_2_12 is -7.15158 over 227 frames.
+test_S17_2_2_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_2_14 is -7.16689 over 227 frames.
+test_S17_2_2_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_2_16 is -7.16629 over 227 frames.
+test_S17_2_2_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_2_18 is -7.14688 over 227 frames.
+test_S17_2_2_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_2_20 is -7.16671 over 227 frames.
+test_S17_2_3_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_3_12 is -7.15672 over 227 frames.
+test_S17_2_3_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_3_14 is -7.17101 over 227 frames.
+test_S17_2_3_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_3_16 is -7.16524 over 227 frames.
+test_S17_2_3_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_3_18 is -7.16 over 227 frames.
+test_S17_2_3_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_3_20 is -7.16467 over 227 frames.
+test_S17_2_4_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_4_12 is -7.15828 over 227 frames.
+test_S17_2_4_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_4_14 is -7.17761 over 227 frames.
+test_S17_2_4_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_4_16 is -7.17519 over 227 frames.
+test_S17_2_4_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_4_18 is -7.16529 over 227 frames.
+test_S17_2_4_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_4_20 is -7.17332 over 227 frames.
+test_S17_2_5_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_5_12 is -7.16532 over 227 frames.
+test_S17_2_5_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_5_14 is -7.16338 over 227 frames.
+test_S17_2_5_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_5_16 is -7.16942 over 227 frames.
+test_S17_2_5_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_5_18 is -7.16654 over 227 frames.
+test_S17_2_5_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_5_20 is -7.16292 over 227 frames.
+test_S17_2_6_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_6_12 is -7.16323 over 227 frames.
+test_S17_2_6_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_6_14 is -7.15376 over 227 frames.
+test_S17_2_6_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_6_16 is -7.14479 over 227 frames.
+test_S17_2_6_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_6_18 is -7.18222 over 227 frames.
+test_S17_2_6_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_6_20 is -7.15616 over 227 frames.
+test_S17_2_7_12 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_7_12 is -7.15449 over 227 frames.
+test_S17_2_7_14 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_7_14 is -7.15705 over 227 frames.
+test_S17_2_7_16 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_7_16 is -7.14849 over 227 frames.
+test_S17_2_7_18 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_7_18 is -7.14983 over 227 frames.
+test_S17_2_7_20 SIL waitpanunga oruoru aalukka tharen SIL waitpanunga oruoru aalukka tharen SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S17_2_7_20 is -7.1622 over 227 frames.
+test_S18_1_1_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_1_12 is -7.29693 over 238 frames.
+test_S18_1_1_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_1_14 is -7.30686 over 238 frames.
+test_S18_1_1_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_1_16 is -7.30607 over 238 frames.
+test_S18_1_1_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_1_18 is -7.29265 over 238 frames.
+test_S18_1_1_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_1_20 is -7.30238 over 238 frames.
+test_S18_1_2_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_2_12 is -7.29431 over 238 frames.
+test_S18_1_2_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_2_14 is -7.30305 over 238 frames.
+test_S18_1_2_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_2_16 is -7.31133 over 238 frames.
+test_S18_1_2_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_2_18 is -7.30397 over 238 frames.
+test_S18_1_2_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_2_20 is -7.30828 over 238 frames.
+test_S18_1_3_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_3_12 is -7.30367 over 238 frames.
+test_S18_1_3_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_3_14 is -7.30202 over 238 frames.
+test_S18_1_3_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_3_16 is -7.30311 over 238 frames.
+test_S18_1_3_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_3_18 is -7.30427 over 238 frames.
+test_S18_1_3_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_3_20 is -7.29697 over 238 frames.
+test_S18_1_4_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_4_12 is -7.30641 over 238 frames.
+test_S18_1_4_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_4_14 is -7.29793 over 238 frames.
+test_S18_1_4_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_4_16 is -7.30188 over 238 frames.
+test_S18_1_4_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_4_18 is -7.29745 over 238 frames.
+test_S18_1_4_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_4_20 is -7.29464 over 238 frames.
+test_S18_1_5_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_5_12 is -7.30709 over 238 frames.
+test_S18_1_5_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_5_14 is -7.28615 over 238 frames.
+test_S18_1_5_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_5_16 is -7.2858 over 238 frames.
+test_S18_1_5_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_5_18 is -7.29765 over 238 frames.
+test_S18_1_5_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_5_20 is -7.30451 over 238 frames.
+test_S18_1_6_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_6_12 is -7.30726 over 238 frames.
+test_S18_1_6_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_6_14 is -7.30186 over 238 frames.
+test_S18_1_6_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_6_16 is -7.28347 over 238 frames.
+test_S18_1_6_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_6_18 is -7.28901 over 238 frames.
+test_S18_1_6_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_6_20 is -7.28375 over 238 frames.
+test_S18_1_7_12 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_7_12 is -7.27712 over 238 frames.
+test_S18_1_7_14 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_7_14 is -7.28497 over 238 frames.
+test_S18_1_7_16 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_7_16 is -7.27168 over 238 frames.
+test_S18_1_7_18 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_7_18 is -7.28959 over 238 frames.
+test_S18_1_7_20 SIL porulreadyaaychu vanthu vaangikonga SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_1_7_20 is -7.29111 over 238 frames.
+test_S18_2_1_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_1_12 is -7.34095 over 236 frames.
+test_S18_2_1_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_1_14 is -7.33683 over 236 frames.
+test_S18_2_1_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_1_16 is -7.35007 over 236 frames.
+test_S18_2_1_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_1_18 is -7.33815 over 236 frames.
+test_S18_2_1_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_1_20 is -7.34568 over 236 frames.
+test_S18_2_2_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_2_12 is -7.3528 over 236 frames.
+test_S18_2_2_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_2_14 is -7.34879 over 236 frames.
+test_S18_2_2_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_2_16 is -7.32981 over 236 frames.
+test_S18_2_2_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_2_18 is -7.34543 over 236 frames.
+test_S18_2_2_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_2_20 is -7.34724 over 236 frames.
+test_S18_2_3_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_3_12 is -7.34254 over 236 frames.
+test_S18_2_3_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_3_14 is -7.32443 over 236 frames.
+test_S18_2_3_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_3_16 is -7.33698 over 236 frames.
+test_S18_2_3_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_3_18 is -7.34462 over 236 frames.
+test_S18_2_3_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_3_20 is -7.33668 over 236 frames.
+test_S18_2_4_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_4_12 is -7.3251 over 236 frames.
+test_S18_2_4_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_4_14 is -7.33638 over 236 frames.
+test_S18_2_4_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_4_16 is -7.32468 over 236 frames.
+test_S18_2_4_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_4_18 is -7.33329 over 236 frames.
+test_S18_2_4_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_4_20 is -7.34307 over 236 frames.
+test_S18_2_5_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_5_12 is -7.33735 over 236 frames.
+test_S18_2_5_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_5_14 is -7.33048 over 236 frames.
+test_S18_2_5_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_5_16 is -7.32526 over 236 frames.
+test_S18_2_5_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_5_18 is -7.33623 over 236 frames.
+test_S18_2_5_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_5_20 is -7.32677 over 236 frames.
+test_S18_2_6_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_6_12 is -7.30418 over 236 frames.
+test_S18_2_6_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_6_14 is -7.32017 over 236 frames.
+test_S18_2_6_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_6_16 is -7.29886 over 236 frames.
+test_S18_2_6_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_6_18 is -7.31481 over 236 frames.
+test_S18_2_6_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_6_20 is -7.31983 over 236 frames.
+test_S18_2_7_12 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_7_12 is -7.27577 over 236 frames.
+test_S18_2_7_14 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_7_14 is -7.27747 over 236 frames.
+test_S18_2_7_16 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_7_16 is -7.2906 over 236 frames.
+test_S18_2_7_18 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_7_18 is -7.30229 over 236 frames.
+test_S18_2_7_20 SIL porulreadyaaychu vanthu vaangikonga SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S18_2_7_20 is -7.25971 over 236 frames.
+test_S19_1_1_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_1_12 is -7.39986 over 194 frames.
+test_S19_1_1_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_1_14 is -7.39881 over 194 frames.
+test_S19_1_1_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_1_16 is -7.40648 over 194 frames.
+test_S19_1_1_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_1_18 is -7.39863 over 194 frames.
+test_S19_1_1_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_1_20 is -7.39657 over 194 frames.
+test_S19_1_2_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_2_12 is -7.4027 over 194 frames.
+test_S19_1_2_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_2_14 is -7.39998 over 194 frames.
+test_S19_1_2_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_2_16 is -7.40112 over 194 frames.
+test_S19_1_2_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_2_18 is -7.39396 over 194 frames.
+test_S19_1_2_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_2_20 is -7.39857 over 194 frames.
+test_S19_1_3_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_3_12 is -7.40101 over 194 frames.
+test_S19_1_3_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_3_14 is -7.39881 over 194 frames.
+test_S19_1_3_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_3_16 is -7.40179 over 194 frames.
+test_S19_1_3_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_3_18 is -7.39863 over 194 frames.
+test_S19_1_3_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_3_20 is -7.40366 over 194 frames.
+test_S19_1_4_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_4_12 is -7.4018 over 194 frames.
+test_S19_1_4_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_4_14 is -7.39519 over 194 frames.
+test_S19_1_4_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_4_16 is -7.39933 over 194 frames.
+test_S19_1_4_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_4_18 is -7.39011 over 194 frames.
+test_S19_1_4_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_4_20 is -7.39811 over 194 frames.
+test_S19_1_5_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_5_12 is -7.39474 over 194 frames.
+test_S19_1_5_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_5_14 is -7.40314 over 194 frames.
+test_S19_1_5_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_5_16 is -7.38441 over 194 frames.
+test_S19_1_5_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_5_18 is -7.39773 over 194 frames.
+test_S19_1_5_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_5_20 is -7.40078 over 194 frames.
+test_S19_1_6_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_6_12 is -7.40278 over 194 frames.
+test_S19_1_6_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_6_14 is -7.39453 over 194 frames.
+test_S19_1_6_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_6_16 is -7.39692 over 194 frames.
+test_S19_1_6_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_6_18 is -7.39428 over 194 frames.
+test_S19_1_6_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_6_20 is -7.38203 over 194 frames.
+test_S19_1_7_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_7_12 is -7.39461 over 194 frames.
+test_S19_1_7_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_7_14 is -7.38391 over 194 frames.
+test_S19_1_7_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_7_16 is -7.38539 over 194 frames.
+test_S19_1_7_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_7_18 is -7.38526 over 194 frames.
+test_S19_1_7_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_1_7_20 is -7.39492 over 194 frames.
+test_S19_2_1_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_1_12 is -7.55792 over 157 frames.
+test_S19_2_1_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_1_14 is -7.55117 over 157 frames.
+test_S19_2_1_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_1_16 is -7.56559 over 157 frames.
+test_S19_2_1_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_1_18 is -7.56347 over 157 frames.
+test_S19_2_1_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_1_20 is -7.57487 over 157 frames.
+test_S19_2_2_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_2_12 is -7.55757 over 157 frames.
+test_S19_2_2_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_2_14 is -7.56563 over 157 frames.
+test_S19_2_2_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_2_16 is -7.56223 over 157 frames.
+test_S19_2_2_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_2_18 is -7.55992 over 157 frames.
+test_S19_2_2_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_2_20 is -7.55432 over 157 frames.
+test_S19_2_3_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_3_12 is -7.56228 over 157 frames.
+test_S19_2_3_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_3_14 is -7.57427 over 157 frames.
+test_S19_2_3_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_3_16 is -7.56254 over 157 frames.
+test_S19_2_3_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_3_18 is -7.55203 over 157 frames.
+test_S19_2_3_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_3_20 is -7.56057 over 157 frames.
+test_S19_2_4_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_4_12 is -7.55556 over 157 frames.
+test_S19_2_4_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_4_14 is -7.55528 over 157 frames.
+test_S19_2_4_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_4_16 is -7.56701 over 157 frames.
+test_S19_2_4_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_4_18 is -7.57277 over 157 frames.
+test_S19_2_4_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_4_20 is -7.55534 over 157 frames.
+test_S19_2_5_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_5_12 is -7.55719 over 157 frames.
+test_S19_2_5_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_5_14 is -7.55252 over 157 frames.
+test_S19_2_5_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_5_16 is -7.55206 over 157 frames.
+test_S19_2_5_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_5_18 is -7.5612 over 157 frames.
+test_S19_2_5_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_5_20 is -7.54775 over 157 frames.
+test_S19_2_6_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_6_12 is -7.5348 over 157 frames.
+test_S19_2_6_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_6_14 is -7.56092 over 157 frames.
+test_S19_2_6_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_6_16 is -7.55592 over 157 frames.
+test_S19_2_6_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_6_18 is -7.56259 over 157 frames.
+test_S19_2_6_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_6_20 is -7.55102 over 157 frames.
+test_S19_2_7_12 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_7_12 is -7.5235 over 157 frames.
+test_S19_2_7_14 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_7_14 is -7.51841 over 157 frames.
+test_S19_2_7_16 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_7_16 is -7.49971 over 157 frames.
+test_S19_2_7_18 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_7_18 is -7.50113 over 157 frames.
+test_S19_2_7_20 SIL silrailla maathitteu vareenggala SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S19_2_7_20 is -7.54318 over 157 frames.
+test_S1_1_1_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_1_12 is -6.94771 over 172 frames.
+test_S1_1_1_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_1_14 is -6.9364 over 172 frames.
+test_S1_1_1_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_1_16 is -6.95033 over 172 frames.
+test_S1_1_1_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_1_18 is -6.96556 over 172 frames.
+test_S1_1_1_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_1_20 is -6.9626 over 172 frames.
+test_S1_1_2_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_2_12 is -6.92892 over 172 frames.
+test_S1_1_2_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_2_14 is -6.93132 over 172 frames.
+test_S1_1_2_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_2_16 is -6.92497 over 172 frames.
+test_S1_1_2_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_2_18 is -6.92741 over 172 frames.
+test_S1_1_2_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_2_20 is -6.94918 over 172 frames.
+test_S1_1_3_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_3_12 is -6.95342 over 172 frames.
+test_S1_1_3_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_3_14 is -6.9494 over 172 frames.
+test_S1_1_3_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_3_16 is -6.95249 over 172 frames.
+test_S1_1_3_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_3_18 is -6.96265 over 172 frames.
+test_S1_1_3_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_3_20 is -6.94638 over 172 frames.
+test_S1_1_4_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_4_12 is -6.96357 over 172 frames.
+test_S1_1_4_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_4_14 is -6.94079 over 172 frames.
+test_S1_1_4_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_4_16 is -6.93874 over 172 frames.
+test_S1_1_4_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_4_18 is -6.95187 over 172 frames.
+test_S1_1_4_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_4_20 is -6.92947 over 172 frames.
+test_S1_1_5_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_5_12 is -6.94573 over 172 frames.
+test_S1_1_5_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_5_14 is -6.96684 over 172 frames.
+test_S1_1_5_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_5_16 is -6.92715 over 172 frames.
+test_S1_1_5_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_5_18 is -6.95256 over 172 frames.
+test_S1_1_5_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_5_20 is -6.94404 over 172 frames.
+test_S1_1_6_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_6_12 is -6.95676 over 172 frames.
+test_S1_1_6_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_6_14 is -6.9249 over 172 frames.
+test_S1_1_6_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_6_16 is -6.94607 over 172 frames.
+test_S1_1_6_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_6_18 is -6.98996 over 172 frames.
+test_S1_1_6_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_6_20 is -6.96807 over 172 frames.
+test_S1_1_7_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_7_12 is -6.98384 over 172 frames.
+test_S1_1_7_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_7_14 is -6.90109 over 172 frames.
+test_S1_1_7_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_7_16 is -6.89516 over 172 frames.
+test_S1_1_7_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_7_18 is -6.90829 over 172 frames.
+test_S1_1_7_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_1_7_20 is -6.9732 over 172 frames.
+test_S1_2_1_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_1_12 is -7.08408 over 161 frames.
+test_S1_2_1_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_1_14 is -7.04645 over 161 frames.
+test_S1_2_1_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_1_16 is -7.05781 over 161 frames.
+test_S1_2_1_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_1_18 is -7.02172 over 161 frames.
+test_S1_2_1_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_1_20 is -7.03868 over 161 frames.
+test_S1_2_2_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_2_12 is -7.06454 over 161 frames.
+test_S1_2_2_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_2_14 is -7.02052 over 161 frames.
+test_S1_2_2_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_2_16 is -7.02981 over 161 frames.
+test_S1_2_2_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_2_18 is -7.00637 over 161 frames.
+test_S1_2_2_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_2_20 is -7.02962 over 161 frames.
+test_S1_2_3_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_3_12 is -7.05083 over 161 frames.
+test_S1_2_3_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_3_14 is -7.03906 over 161 frames.
+test_S1_2_3_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_3_16 is -7.08958 over 161 frames.
+test_S1_2_3_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_3_18 is -7.06136 over 161 frames.
+test_S1_2_3_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_3_20 is -7.02127 over 161 frames.
+test_S1_2_4_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_4_12 is -7.00318 over 161 frames.
+test_S1_2_4_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_4_14 is -7.01789 over 161 frames.
+test_S1_2_4_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_4_16 is -7.00774 over 161 frames.
+test_S1_2_4_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_4_18 is -7.06415 over 161 frames.
+test_S1_2_4_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_4_20 is -7.06147 over 161 frames.
+test_S1_2_5_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_5_12 is -7.0489 over 161 frames.
+test_S1_2_5_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_5_14 is -7.03991 over 161 frames.
+test_S1_2_5_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_5_16 is -7.07339 over 161 frames.
+test_S1_2_5_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_5_18 is -7.03223 over 161 frames.
+test_S1_2_5_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_5_20 is -7.02311 over 161 frames.
+test_S1_2_6_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_6_12 is -6.95534 over 161 frames.
+test_S1_2_6_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_6_14 is -6.99276 over 161 frames.
+test_S1_2_6_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_6_16 is -7.00551 over 161 frames.
+test_S1_2_6_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_6_18 is -7.00859 over 161 frames.
+test_S1_2_6_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_6_20 is -7.00661 over 161 frames.
+test_S1_2_7_12 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_7_12 is -6.9752 over 161 frames.
+test_S1_2_7_14 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_7_14 is -7.01317 over 161 frames.
+test_S1_2_7_16 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_7_16 is -6.98522 over 161 frames.
+test_S1_2_7_18 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_7_18 is -6.90593 over 161 frames.
+test_S1_2_7_20 SIL ungalukku ennakka veenum SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S1_2_7_20 is -6.93029 over 161 frames.
+test_S20_1_1_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_1_12 is -7.64379 over 252 frames.
+test_S20_1_1_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_1_14 is -7.64648 over 252 frames.
+test_S20_1_1_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_1_16 is -7.62049 over 252 frames.
+test_S20_1_1_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_1_18 is -7.64464 over 252 frames.
+test_S20_1_1_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_1_20 is -7.6587 over 252 frames.
+test_S20_1_2_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_2_12 is -7.63552 over 252 frames.
+test_S20_1_2_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_2_14 is -7.66936 over 252 frames.
+test_S20_1_2_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_2_16 is -7.64819 over 252 frames.
+test_S20_1_2_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_2_18 is -7.63464 over 252 frames.
+test_S20_1_2_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_2_20 is -7.6615 over 252 frames.
+test_S20_1_3_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_3_12 is -7.64108 over 252 frames.
+test_S20_1_3_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_3_14 is -7.63951 over 252 frames.
+test_S20_1_3_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_3_16 is -7.63244 over 252 frames.
+test_S20_1_3_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_3_18 is -7.63812 over 252 frames.
+test_S20_1_3_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_3_20 is -7.6448 over 252 frames.
+test_S20_1_4_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_4_12 is -7.60743 over 252 frames.
+test_S20_1_4_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_4_14 is -7.62097 over 252 frames.
+test_S20_1_4_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_4_16 is -7.63846 over 252 frames.
+test_S20_1_4_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_4_18 is -7.62911 over 252 frames.
+test_S20_1_4_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_4_20 is -7.6216 over 252 frames.
+test_S20_1_5_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_5_12 is -7.60771 over 252 frames.
+test_S20_1_5_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_5_14 is -7.62426 over 252 frames.
+test_S20_1_5_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_5_16 is -7.62716 over 252 frames.
+test_S20_1_5_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_5_18 is -7.58826 over 252 frames.
+test_S20_1_5_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_5_20 is -7.59046 over 252 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 805 utterances, errors on 0
+test_S20_1_6_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_6_12 is -7.58658 over 252 frames.
+test_S20_1_6_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_6_14 is -7.59098 over 252 frames.
+test_S20_1_6_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_6_16 is -7.61379 over 252 frames.
+test_S20_1_6_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_6_18 is -7.60642 over 252 frames.
+test_S20_1_6_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_6_20 is -7.58955 over 252 frames.
+test_S20_1_7_12 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_7_12 is -7.54566 over 252 frames.
+test_S20_1_7_14 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_7_14 is -7.56469 over 252 frames.
+test_S20_1_7_16 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_7_16 is -7.56941 over 252 frames.
+LOG (transform-feats:main():transform-feats.cc:158) Overall average logdet is 0 over 170205 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 805 utterances; 0 had errors.
+test_S20_1_7_18 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_7_18 is -7.56924 over 252 frames.
+test_S20_1_7_20 SIL annaa neenga eduthuttuvantha arisimootta karactta irukkeu SIL 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance test_S20_1_7_20 is -7.57403 over 252 frames.
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:176) Time taken 52.2868s: real-time factor assuming 100 frames/sec is 0.0307199
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:179) Done 805 utterances, failed for 0
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.30607 over 170205 frames.
+# Accounting: time=53 threads=1
+# Ended (code 0) at Mon Feb 24 10:02:52 IST 2020, elapsed time 53 seconds

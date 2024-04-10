@@ -1,0 +1,39 @@
+# nnet-combine-fast --use-gpu=no --num-threads=16 --verbose=3 --minibatch-size=512 ark:exp/mono3_nnet/egs/combine.egs exp/mono3_nnet/final.mdl 
+# Started at Thu Feb 27 23:19:59 IST 2020
+#
+nnet-combine-fast --use-gpu=no --num-threads=16 --verbose=3 --minibatch-size=512 ark:exp/mono3_nnet/egs/combine.egs exp/mono3_nnet/final.mdl 
+
+Using a validation set, compute an optimal combination of a number of
+neural nets (the combination weights are separate for each layer and
+do not have to sum to one).  The optimization is BFGS, which is initialized
+from the best of the individual input neural nets (or as specified by
+--initial-model)
+
+Usage:  nnet-combine-fast [options] <model-in1> <model-in2> ... <model-inN> <valid-examples-in> <model-out>
+
+e.g.:
+ nnet-combine-fast 1.1.nnet 1.2.nnet 1.3.nnet ark:valid.egs 2.nnet
+Caution: the first input neural net must not be a gradient.
+
+Options:
+  --alpha                     : Value we use in smoothing the Fisher matrix with its diagonal, in preconditioning the update. (float, default = 0.01)
+  --binary                    : Write output in binary mode (bool, default = true)
+  --fisher-floor              : Floor for diagonal of Fisher matrix (used in preconditioning) (float, default = 1e-20)
+  --fisher-minibatch-size     : Size of minibatch used in computation of Fisher matrix (smaller -> better preconditioning (int, default = 64)
+  --initial-impr              : Amount of objective-function change We aim for on the first iteration. (float, default = 0.01)
+  --initial-model             : Specifies where to start the optimization from.  If 0 ... #models-1, then specifies the model; if >= #models, then the average of all inputs; if <0, chosen automatically from the previous options. (int, default = -1)
+  --max-lbfgs-dim             : Maximum dimension to use in L-BFGS (will not get higher than this even if the dimension of the space gets higher.) (int, default = 10)
+  --minibatch-size            : Minibatch size used in computing gradients (only affects speed) (int, default = 1024)
+  --num-lbfgs-iters           : Maximum number of function evaluations for L-BFGS to use when optimizing combination weights (int, default = 10)
+  --num-threads               : Number of threads to use in multi-core computation (int, default = 1)
+  --regularizer               : Add to the objective function (which is average log-like per frame), -0.5 * regularizer * square of parameters. (float, default = 0)
+  --use-gpu                   : yes|no|optional|wait, only has effect if compiled with CUDA (string, default = "yes")
+
+Standard options:
+  --config                    : Configuration file to read (this option may be repeated) (string, default = "")
+  --help                      : Print out usage message (bool, default = false)
+  --print-args                : Print the command line arguments (to stderr) (bool, default = true)
+  --verbose                   : Verbose level (higher->more logging) (int, default = 0)
+
+# Accounting: time=0 threads=1
+# Ended (code 1) at Thu Feb 27 23:19:59 IST 2020, elapsed time 0 seconds

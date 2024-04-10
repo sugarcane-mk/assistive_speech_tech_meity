@@ -1,0 +1,14 @@
+# acc-tree-stats --ci-phones=1 exp/mono_ali/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/28/utt2spk scp:data/train/split30/28/cmvn.scp scp:data/train/split30/28/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/28/utt2spk ark,s,cs:exp/mono2/trans.28 ark:- ark:- |" "ark:gunzip -c exp/mono_ali/ali.28.gz|" exp/mono2/28.treeacc 
+# Started at Mon Feb 24 09:55:58 IST 2020
+#
+acc-tree-stats --ci-phones=1 exp/mono_ali/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/28/utt2spk scp:data/train/split30/28/cmvn.scp scp:data/train/split30/28/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/28/utt2spk ark,s,cs:exp/mono2/trans.28 ark:- ark:- |' 'ark:gunzip -c exp/mono_ali/ali.28.gz|' exp/mono2/28.treeacc 
+transform-feats --utt2spk=ark:data/train/split30/28/utt2spk ark,s,cs:exp/mono2/trans.28 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/28/utt2spk scp:data/train/split30/28/cmvn.scp scp:data/train/split30/28/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 241 utterances, errors on 0
+LOG (transform-feats:main():transform-feats.cc:158) Overall average logdet is 1.93703 over 89954 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 241 utterances; 0 had errors.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:118) Accumulated stats for 241 files, 0 failed due to no alignment, 0 failed for other reasons.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:121) Number of separate stats (context-dependent states) is 21
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Feb 24 09:55:59 IST 2020, elapsed time 1 seconds

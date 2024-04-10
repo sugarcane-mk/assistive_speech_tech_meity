@@ -1,0 +1,15 @@
+# gmm-rescore-lattice exp/mono2/final.mdl "ark:gunzip -c exp/mono2/decode_test/lat.tmp.2.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split2/2/utt2spk scp:data/test/split2/2/cmvn.scp scp:data/test/split2/2/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/test/split2/2/utt2spk ark:exp/mono2/decode_test/trans.2 ark:- ark:- |" ark:- | lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- "ark:|gzip -c > exp/mono2/decode_test/lat.2.gz" && rm exp/mono2/decode_test/lat.tmp.2.gz 
+# Started at Mon Feb 24 10:03:09 IST 2020
+#
+lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- 'ark:|gzip -c > exp/mono2/decode_test/lat.2.gz' 
+gmm-rescore-lattice exp/mono2/final.mdl 'ark:gunzip -c exp/mono2/decode_test/lat.tmp.2.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split2/2/utt2spk scp:data/test/split2/2/cmvn.scp scp:data/test/split2/2/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/test/split2/2/utt2spk ark:exp/mono2/decode_test/trans.2 ark:- ark:- |' ark:- 
+transform-feats --utt2spk=ark:data/test/split2/2/utt2spk ark:exp/mono2/decode_test/trans.2 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split2/2/utt2spk scp:data/test/split2/2/cmvn.scp scp:data/test/split2/2/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 805 utterances, errors on 0
+LOG (transform-feats:main():transform-feats.cc:158) Overall average logdet is 0 over 193470 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 805 utterances; 0 had errors.
+LOG (gmm-rescore-lattice:main():gmm-rescore-lattice.cc:103) Done 805 lattices with errors on 0, #frames is 193470
+LOG (lattice-determinize-pruned:main():lattice-determinize-pruned.cc:111) Done 805 lattices, determinization finished earlier than specified by the beam on 0 of these.
+# Accounting: time=11 threads=1
+# Ended (code 0) at Mon Feb 24 10:03:20 IST 2020, elapsed time 11 seconds

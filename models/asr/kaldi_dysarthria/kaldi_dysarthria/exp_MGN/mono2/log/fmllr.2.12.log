@@ -1,0 +1,568 @@
+# ali-to-post "ark:gunzip -c exp/mono2/ali.12.gz|" ark:- | weight-silence-post 0.0 1 exp/mono2/2.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split30/12/spk2utt exp/mono2/2.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/12/utt2spk scp:data/train/split30/12/cmvn.scp scp:data/train/split30/12/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/12/utt2spk ark,s,cs:exp/mono2/trans.12 ark:- ark:- |" ark:- ark:exp/mono2/tmp_trans.12 
+# Started at Thu Feb 27 12:03:33 IST 2020
+#
+weight-silence-post 0.0 1 exp/mono2/2.mdl ark:- ark:- 
+ali-to-post 'ark:gunzip -c exp/mono2/ali.12.gz|' ark:- 
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split30/12/spk2utt exp/mono2/2.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/12/utt2spk scp:data/train/split30/12/cmvn.scp scp:data/train/split30/12/feats.scp ark:- | add-deltas  ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/12/utt2spk ark,s,cs:exp/mono2/trans.12 ark:- ark:- |' ark:- ark:exp/mono2/tmp_trans.12 
+transform-feats --utt2spk=ark:data/train/split30/12/utt2spk ark,s,cs:exp/mono2/trans.12 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/12/utt2spk scp:data/train/split30/12/cmvn.scp scp:data/train/split30/12/feats.scp ark:- 
+add-deltas ark:- ark:- 
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 215
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_4_20, auxf-impr from fMLLR is 0, over 215 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_5_12, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_5_14, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_5_16, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 200
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_5_18, auxf-impr from fMLLR is 0, over 200 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 215
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_5_20, auxf-impr from fMLLR is 0, over 215 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_6_12, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_6_14, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_6_16, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 200
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_6_18, auxf-impr from fMLLR is 0, over 200 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 215
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_6_20, auxf-impr from fMLLR is 0, over 215 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_7_12, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_7_14, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 225
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_7_16, auxf-impr from fMLLR is 0, over 225 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 200
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_7_18, auxf-impr from fMLLR is 0, over 200 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 214
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_12_7_20, auxf-impr from fMLLR is 0, over 214 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_1_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_1_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_1_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_1_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_1_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_2_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_2_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_2_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_2_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_2_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_3_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_3_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_3_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_3_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_3_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_4_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_4_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_4_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_4_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_4_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_5_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_5_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_5_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_5_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_5_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_6_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_6_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_6_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_6_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_6_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_7_12, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_7_14, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 248
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_7_16, auxf-impr from fMLLR is 0, over 248 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_7_18, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 237
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_13_7_20, auxf-impr from fMLLR is 0, over 237 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_1_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_1_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_1_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_1_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_1_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_2_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_2_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_2_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_2_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_2_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_3_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_3_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_3_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_3_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_3_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_4_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_4_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_4_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 217
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_4_18, auxf-impr from fMLLR is 0, over 217 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_4_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_5_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_5_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_5_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_5_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_5_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_6_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_6_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_6_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_6_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_6_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_7_12, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_7_14, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 243
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_7_16, auxf-impr from fMLLR is 0, over 243 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 216
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_7_18, auxf-impr from fMLLR is 0, over 216 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_14_7_20, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_1_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_1_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_1_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_1_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_1_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_2_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_2_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_2_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_2_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_2_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_3_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_3_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_3_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_3_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_3_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_4_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_4_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_4_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_4_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_4_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_5_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_5_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_5_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_5_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_5_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_6_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_6_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_6_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_6_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_6_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_7_12, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 198
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_7_14, auxf-impr from fMLLR is 0, over 198 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 202
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_7_16, auxf-impr from fMLLR is 0, over 202 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 180
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_7_18, auxf-impr from fMLLR is 0, over 180 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 193
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_3_7_20, auxf-impr from fMLLR is 0, over 193 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_1_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_1_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_1_16, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_1_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_1_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_2_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_2_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_2_16, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_2_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_2_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_3_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_3_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_3_16, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_3_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_3_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_4_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_4_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_4_16, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_4_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_4_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_5_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_5_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_5_16, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_5_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_5_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 251
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_6_12, auxf-impr from fMLLR is 0, over 251 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_6_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_6_16, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_6_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_6_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_7_12, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 246
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_7_14, auxf-impr from fMLLR is 0, over 246 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 250
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_7_16, auxf-impr from fMLLR is 0, over 250 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 223
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_7_18, auxf-impr from fMLLR is 0, over 223 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 240
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_4_7_20, auxf-impr from fMLLR is 0, over 240 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_1_12, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_1_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 242
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_1_16, auxf-impr from fMLLR is 0, over 242 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 214
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_1_18, auxf-impr from fMLLR is 0, over 214 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_1_20, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_2_12, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_2_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_2_16, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 214
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_2_18, auxf-impr from fMLLR is 0, over 214 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_2_20, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_3_12, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_3_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 242
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_3_16, auxf-impr from fMLLR is 0, over 242 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 214
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_3_18, auxf-impr from fMLLR is 0, over 214 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_3_20, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_4_12, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_4_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_4_16, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 212
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_4_18, auxf-impr from fMLLR is 0, over 212 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_4_20, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_5_12, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_5_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_5_16, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 212
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_5_18, auxf-impr from fMLLR is 0, over 212 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_5_20, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_6_12, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_6_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_6_16, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 214
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_6_18, auxf-impr from fMLLR is 0, over 214 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_6_20, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 238
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_7_12, auxf-impr from fMLLR is 0, over 238 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 234
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_7_14, auxf-impr from fMLLR is 0, over 234 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 239
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_7_16, auxf-impr from fMLLR is 0, over 239 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 212
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_7_18, auxf-impr from fMLLR is 0, over 212 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_5_7_20, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_1_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_1_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_1_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_1_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_1_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_2_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_2_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_2_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_2_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_2_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_3_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_3_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_3_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_3_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_3_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_4_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_4_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_4_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_4_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_4_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_5_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_5_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_5_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_5_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_5_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_6_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 273
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_6_14, auxf-impr from fMLLR is 0, over 273 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_6_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_6_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_6_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_7_12, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 271
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_7_14, auxf-impr from fMLLR is 0, over 271 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 278
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_7_16, auxf-impr from fMLLR is 0, over 278 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 247
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_7_18, auxf-impr from fMLLR is 0, over 247 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 266
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_6_7_20, auxf-impr from fMLLR is 0, over 266 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_1_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_1_14, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_1_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_1_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_1_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_2_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_2_14, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_2_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_2_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_2_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_3_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_3_14, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_3_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_3_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_3_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_4_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_4_14, auxf-impr from fMLLR is 0, over 224 frames.
+LOG (ali-to-post:main():ali-to-post.cc:65) Converted 275 alignments.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_4_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_4_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_4_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_5_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_5_14, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_5_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_5_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_5_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_6_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_6_14, auxf-impr from fMLLR is 0, over 224 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_6_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_6_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_6_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 230
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_7_12, auxf-impr from fMLLR is 0, over 230 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 224
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_7_14, auxf-impr from fMLLR is 0, over 224 frames.
+LOG (weight-silence-post:main():weight-silence-post.cc:95) Done 275 posteriors.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 228
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_7_16, auxf-impr from fMLLR is 0, over 228 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 203
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_7_18, auxf-impr from fMLLR is 0, over 203 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 220
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_7_7_20, auxf-impr from fMLLR is 0, over 220 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 231
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_1_12, auxf-impr from fMLLR is 0, over 231 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 227
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_1_14, auxf-impr from fMLLR is 0, over 227 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_1_16, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 206
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_1_18, auxf-impr from fMLLR is 0, over 206 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 222
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_1_20, auxf-impr from fMLLR is 0, over 222 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 275 utterances, errors on 0
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 231
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_2_12, auxf-impr from fMLLR is 0, over 231 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 227
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_2_14, auxf-impr from fMLLR is 0, over 227 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_2_16, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 206
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_2_18, auxf-impr from fMLLR is 0, over 206 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 222
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_2_20, auxf-impr from fMLLR is 0, over 222 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 231
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_3_12, auxf-impr from fMLLR is 0, over 231 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 227
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_3_14, auxf-impr from fMLLR is 0, over 227 frames.
+LOG (transform-feats:main():transform-feats.cc:158) Overall average logdet is 0 over 88046 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 275 utterances; 0 had errors.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 232
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_3_16, auxf-impr from fMLLR is 0, over 232 frames.
+WARNING (gmm-est-fmllr:Update():fmllr-diag-gmm.cc:162) Not updating fMLLR since below min-count: count is 206
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:143) For speaker train_S17_8_3_18, auxf-impr from fMLLR is 0, over 206 frames.
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:188) Done 275 files, 0 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0 over 63684 frames.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Thu Feb 27 12:03:35 IST 2020, elapsed time 2 seconds

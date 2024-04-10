@@ -1,0 +1,22 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=25 ark:exp/mono3_nnet/egs/egs.3.0.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=25 "nnet-init --srand=25 exp/mono3_nnet/hidden.config - | nnet-insert exp/mono3_nnet/25.mdl - - |" ark:- exp/mono3_nnet/26.3.mdl 
+# Started at Thu Feb 27 21:02:21 IST 2020
+#
+nnet-shuffle-egs --buffer-size=5000 --srand=25 ark:exp/mono3_nnet/egs/egs.3.0.ark ark:- 
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=25 'nnet-init --srand=25 exp/mono3_nnet/hidden.config - | nnet-insert exp/mono3_nnet/25.mdl - - |' ark:- exp/mono3_nnet/26.3.mdl 
+nnet-init --srand=25 exp/mono3_nnet/hidden.config - 
+nnet-insert exp/mono3_nnet/25.mdl - - 
+LOG (nnet-init:main():nnet-init.cc:69) Initialized raw neural net and wrote it to -
+LOG (nnet-insert:main():nnet-insert.cc:106) Inserted 2 components at position 28
+LOG (nnet-insert:main():nnet-insert.cc:122) Randomized component index 30 with stddev 0.0057735
+LOG (nnet-insert:main():nnet-insert.cc:132) Write neural-net acoustic model to -
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.846127, for component index 28
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.860106, for component index 28
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.84749, for component index 28
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.872076, for component index 28
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.995421, for component index 28
+LOG (nnet-shuffle-egs:main():nnet-shuffle-egs.cc:102) Shuffled order of 81177 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 81177 examples, average log-prob per frame is -0.370347
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-0.370347
+LOG (nnet-train-parallel:main():nnet-train-parallel.cc:102) Finished training, processed 81177 training examples (weighted).  Wrote model to exp/mono3_nnet/26.3.mdl
+# Accounting: time=219 threads=1
+# Ended (code 0) at Thu Feb 27 21:06:00 IST 2020, elapsed time 219 seconds

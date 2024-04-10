@@ -1,0 +1,21 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=8 ark:exp/mono3_nnet/egs/egs.17.0.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=8 exp/mono3_nnet/8.mdl ark:- exp/mono3_nnet/9.17.mdl 
+# Started at Thu Feb 27 16:07:04 IST 2020
+#
+nnet-shuffle-egs --buffer-size=5000 --srand=8 ark:exp/mono3_nnet/egs/egs.17.0.ark ark:- 
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=8 exp/mono3_nnet/8.mdl ark:- exp/mono3_nnet/9.17.mdl 
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.952117, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.761746, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.748097, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.859179, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.891315, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.915125, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.956371, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.972349, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.846278, for component index 4
+LOG (nnet-train-parallel:GetScalingFactor():nnet-component.cc:1564) Limiting step size to 10 using scaling factor 0.837598, for component index 4
+LOG (nnet-shuffle-egs:main():nnet-shuffle-egs.cc:102) Shuffled order of 81158 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 81158 examples, average log-prob per frame is -0.558559
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-0.558559
+LOG (nnet-train-parallel:main():nnet-train-parallel.cc:102) Finished training, processed 81158 training examples (weighted).  Wrote model to exp/mono3_nnet/9.17.mdl
+# Accounting: time=80 threads=1
+# Ended (code 0) at Thu Feb 27 16:08:24 IST 2020, elapsed time 80 seconds

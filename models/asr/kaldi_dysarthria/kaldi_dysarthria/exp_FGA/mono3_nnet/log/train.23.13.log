@@ -1,0 +1,11 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=23 ark:exp/mono3_nnet/egs/egs.13.0.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=23 exp/mono3_nnet/23.mdl ark:- exp/mono3_nnet/24.13.mdl 
+# Started at Thu Feb 13 12:53:27 IST 2020
+#
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=23 exp/mono3_nnet/23.mdl ark:- exp/mono3_nnet/24.13.mdl 
+nnet-shuffle-egs --buffer-size=5000 --srand=23 ark:exp/mono3_nnet/egs/egs.13.0.ark ark:- 
+LOG (nnet-shuffle-egs:main():nnet-shuffle-egs.cc:102) Shuffled order of 50671 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 50671 examples, average log-prob per frame is -0.0731778
+LOG (nnet-train-parallel:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-0.0731778
+LOG (nnet-train-parallel:main():nnet-train-parallel.cc:102) Finished training, processed 50671 training examples (weighted).  Wrote model to exp/mono3_nnet/24.13.mdl
+# Accounting: time=206 threads=1
+# Ended (code 0) at Thu Feb 13 12:56:53 IST 2020, elapsed time 206 seconds

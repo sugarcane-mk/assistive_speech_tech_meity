@@ -1,0 +1,7 @@
+# ali-to-phones --per-frame=true exp/mono3_nnet/decode_test/../final.mdl "ark:gunzip -c exp/mono3_nnet/decode_test/ali_tmp.1.gz|" ark,t:- | paste /dev/stdin <( gunzip -c exp/mono3_nnet/decode_test/depth_tmp.1.gz ) | awk '{ half=NF/2; for (n=2; n<=half; n++) { m=n+half; count[$n " " $m]++;}} END{for(k in count) print k, count[k]; }' | gzip -c > exp/mono3_nnet/decode_test/depth_stats_tmp.1.gz 
+# Started at Fri Feb 28 09:39:19 IST 2020
+#
+ali-to-phones --per-frame=true exp/mono3_nnet/decode_test/../final.mdl 'ark:gunzip -c exp/mono3_nnet/decode_test/ali_tmp.1.gz|' ark,t:- 
+LOG (ali-to-phones:main():ali-to-phones.cc:134) Done 1400 utterances.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Fri Feb 28 09:39:20 IST 2020, elapsed time 1 seconds

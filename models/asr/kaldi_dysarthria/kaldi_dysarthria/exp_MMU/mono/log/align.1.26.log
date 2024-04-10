@@ -1,0 +1,15 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=6 --retry-beam=24 --careful=false "gmm-boost-silence --boost=1.0 1 exp/mono/1.mdl - |" "ark:gunzip -c exp/mono/fsts.26.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- | add-deltas ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.26.gz" 
+# Started at Sat Feb 29 08:11:37 IST 2020
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=6 --retry-beam=24 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/mono/1.mdl - |' 'ark:gunzip -c exp/mono/fsts.26.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- | add-deltas ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.26.gz' 
+gmm-boost-silence --boost=1.0 1 exp/mono/1.mdl - 
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:93) Boosted weights for 3 pdfs, by factor of 1
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 264 utterances, errors on 0
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -98.7717 over 94375 frames.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:131) Retried 0 out of 264 utterances.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:133) Done 264, errors on 0
+# Accounting: time=2 threads=1
+# Ended (code 0) at Sat Feb 29 08:11:39 IST 2020, elapsed time 2 seconds
