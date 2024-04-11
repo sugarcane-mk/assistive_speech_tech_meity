@@ -1,0 +1,1 @@
+This repository contains ASR and TTS models trained as a part of the Assistive Technologies module of the Bashini: NLTM Speech Technologies in Indian Languages Project, funded by the Ministry of Electronics and Information Technology, Govt. of India.
