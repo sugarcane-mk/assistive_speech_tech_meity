@@ -17,8 +17,7 @@ The prerequisites for running the decoding script and test wav files are shared 
 - testing_dysarthric_asr.sh (this is for single utterance decoding),is updated and given in the assistive_speech_tech_meity.zip. 
 - testing_dysarthric_asr_all.sh is for multiple sentences decoding.
 - The speaker ID needs to be entered in the SPK variable which is defined in the first line of the code.
-- The decoding generated in decode.1.log is made available in - - - 
-- ./output_MONO.txt. The WER is present in the decode/scoring_kaldi/best_wer.
+- The decoding generated in decode.1.log is made available in ./output_MONO.txt. The WER is present in the decode/scoring_kaldi/best_wer.
 - ASR_test_data.zip is also provided.
 - It is to be placed as egs/assistive_speech_tech_meity/ASR_test_data.
  
