@@ -5,7 +5,7 @@ This repository provides **Automatic Speech Recognition (ASR) and Text-to-Speech
 The models aim to support speech processing applications for Indian languages and are intended for research and assistive technology development.
 This repo contains:
 - [Pre-trained ASR model_Individual_speaker_6](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/tree/main/models/asr/kaldi_dysarthria)
-- [ASR mild and moderate](class-wise ASR models)
+- [ASR mild and moderate](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/tree/main/class-wise%20ASR%20models)
 - [TTS models HTS](models/tts/hts)
 - [TTS models Taco2](models/tts/taco2)
 
