@@ -8,9 +8,85 @@ This repo contains:
 - [ASR mild and moderate](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/tree/main/class-wise%20ASR%20models)
 - [TTS models HTS](models/tts/hts)
 - [TTS models Taco2](models/tts/taco2)
-- Script for testing ASR - [decode.sh]()
+- Script for testing ASR - [decode_mono.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/models/asr/kaldi_dysarthria/decode_mono.sh) , [decode_tri.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/class-wise%20ASR%20models/decode_tri.sh)
 
 To gain access to the data, please send an request [here](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) with details of how you wish to use the data.
+
+# Usage instructions
+## Pre-requisites
+The pre-trained models were trained using an **older version of Kaldi**.
+To avoid conflicts with your current Kaldi installation, use the provided old Kaldi files and dependencies as mentioned below.
+ 1. `prerequisites.zip`
+     - Contains the shared libraries and dependencies that should be placed in /usr/lib on your system.
+     - This ensures that any binary or shared libs used by the old Kaldi will work correctly.
+
+ 2.  Old versions of:
+
+       - `steps` directory
+       -   `utils` directory
+       -   `kaldi/src` directory
+       -   `kaldi/tools` directory
+       -   `path.sh` script (Kaldi root directory has to be updated)
+
+These are all packaged inside the assistive_speech_tech_meity.zip.
+
+---
+## Setup & Usage Flow (with steps and utils inside cwd/)
+
+ #   Extract assistive_speech_tech_meity.zip
+     #  Unzip to your working directory. You will have:
+```
+kaldi/
+  egs/
+    cwd/
+      steps/       ← old steps here  
+      utils/       ← old utils here  
+      path.sh      ← old path.sh file  
+  src/           ← old kaldi/src  
+  tools/         ← old kaldi/tools  
+prerequisites.zip  ← dependencies to copy to /usr/lib
+```
+# Install Prerequisites
+```
+sudo unzip prerequisites.zip -d /usr/lib
+```
+# Set Kaldi Root & Environment
+In cwd/path.sh, set KALDI_ROOT to the Kaldi root (e.g. two levels up) using relative paths.
+Then source it before running any scripts:
+```
+source path.sh
+```
+# Build Kaldi Binaries
+## From kaldi/src:
+```
+cd ../../src
+./configure
+make clean -j $(nproc)
+make -j $(nproc)
+```
+## Use Old steps and utils from cwd/
+All your training and decoding scripts inside cwd/ should reference steps/ and utils/ from the same cwd/ folder, not the global Kaldi folders.
+
+---
+
+## Testing Class-wise ASR
+```
+cd kaldi/egs
+git clone --no-checkout https://github.com/SpeechLabSSN/assistive_speech_tech_meity.git
+cd assistive_speech_tech_meity
+git sparse-checkout init --cone
+git sparse-checkout set "class-wise ASR models"
+git checkout
+```
+```
+cd class-wise ASR models
+```
+```
+# usage
+decode_tri.sh <exp_dir> <path_to_test_folder>
+```
+
+
 
 # ASR _Inferencing_ 
 The prerequisites for running the decoding script and test wav files are shared in the zip folders (assistive_speech_tech_meity.zip and ASR_test.zip)
