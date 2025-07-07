@@ -8,6 +8,7 @@ This repo contains:
 - [ASR mild and moderate](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/tree/main/class-wise%20ASR%20models)
 - [TTS models HTS](models/tts/hts)
 - [TTS models Taco2](models/tts/taco2)
+- Script for testing ASR - [decode.sh]()
 
 To gain access to the data, please send an request [here](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) with details of how you wish to use the data.
 
