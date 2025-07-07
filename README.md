@@ -33,8 +33,8 @@ These are all packaged inside the assistive_speech_tech_meity.zip.
 ---
 ## Setup & Usage Flow (with steps and utils inside cwd/)
 
- #   Extract assistive_speech_tech_meity.zip
-     #  Unzip to your working directory. You will have:
+ ###   Extract assistive_speech_tech_meity.zip
+       Unzip to your working directory. You will have:
 ```
 kaldi/
   egs/
@@ -46,27 +46,27 @@ kaldi/
   tools/         ← old kaldi/tools  
 prerequisites.zip  ← dependencies to copy to /usr/lib
 ```
-# Install Prerequisites
+### Install Prerequisites
 ```
 sudo unzip prerequisites.zip -d /usr/lib
 ```
-# Set Kaldi Root & Environment
+### Set Kaldi Root & Environment
 In cwd/path.sh, set KALDI_ROOT to the Kaldi root (e.g. two levels up) using relative paths.
 Then source it before running any scripts:
 ```
 source path.sh
 ```
-# Build Kaldi Binaries
-## From kaldi/src:
+### Build Kaldi Binaries
+ From kaldi/src:
 ```
 cd ../../src
 ./configure
 make clean -j $(nproc)
 make -j $(nproc)
 ```
-## Use Old steps and utils from cwd/
+Use Old steps and utils from cwd/
 All your training and decoding scripts inside cwd/ should reference steps/ and utils/ from the same cwd/ folder, not the global Kaldi folders.
-
+![image](https://github.com/user-attachments/assets/c4ffe85d-772b-44e1-a578-7562f73be6db)
 ---
 
 ## Testing Class-wise ASR
@@ -85,24 +85,7 @@ cd class-wise ASR models
 # usage
 decode_tri.sh <exp_dir> <path_to_test_folder>
 ```
-
-
-
-# ASR _Inferencing_ 
-The prerequisites for running the decoding script and test wav files are shared in the zip folders (assistive_speech_tech_meity.zip and ASR_test.zip)
-
-![image](https://github.com/user-attachments/assets/c4ffe85d-772b-44e1-a578-7562f73be6db)
-
- 
-- The ones to be present in the /usr/lib directory are given as a separate zip file, by the name “prerequisites.zip”, which is present in the assistive_speech_tech_meity.zip
-- The steps ,utils directories (old versions), kaldi/src and kaldi/tools (old versions) used for model building and testing are given in the same zip file. The path.sh is also provided.
-- testing_dysarthric_asr.sh (this is for single utterance decoding),is updated and given in the assistive_speech_tech_meity.zip. 
-- testing_dysarthric_asr_all.sh is for multiple sentences decoding.
-- The speaker ID needs to be entered in the SPK variable which is defined in the first line of the code.
-- The decoding generated in decode.1.log is made available in ./output_MONO.txt. The WER is present in the decode/scoring_kaldi/best_wer.
-- ASR_test_data.zip is also provided.
-- It is to be placed as egs/assistive_speech_tech_meity/ASR_test_data.
- 
+--- 
 # Information on the Testing and Training Datasets
 
 ## SSN-TDSC: Tamil Dysarthric Speech Corpus
