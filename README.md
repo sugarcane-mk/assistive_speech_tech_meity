@@ -81,7 +81,7 @@ git sparse-checkout set "class-wise ASR models"
 git checkout
 ```
 ```
-cd class-wise ASR models
+cd class-wise\ ASR\ models/
 unzip *mild -d test_data_mild 
 unzip *moderate -d test_data_moderate
 ```
