@@ -64,8 +64,10 @@ cd ../../src
 make clean -j $(nproc)
 make -j $(nproc)
 ```
-Use Old steps and utils from cwd/
-All your training and decoding scripts inside cwd/ should reference steps/ and utils/ from the same cwd/ folder, not the global Kaldi folders.
+> Note: All training and decoding scripts inside the cwd/ directory must use the local steps/ and utils/ directories provided in the same folder.
+Do not use the global or system-wide Kaldi versions of these directories.
+Replace any existing steps/ and utils/ folders with the versions included in the assistive_speech_tech_meity.zip package to ensure compatibility with the older Kaldi setup used to train and test the models.
+
 ![image](https://github.com/user-attachments/assets/c4ffe85d-772b-44e1-a578-7562f73be6db)
 ---
 
@@ -80,10 +82,35 @@ git checkout
 ```
 ```
 cd class-wise ASR models
+unzip *mild -d test_data_mild 
+unzip *moderate -d test_data_moderate
 ```
 ```
 # usage
-decode_tri.sh <exp_dir> <path_to_test_folder>
+# decode_tri.sh <exp_dir> <path_to_test_folder>
+# Example : To test with a mild dysarthric speaker data, use the following syntax
+decode_tri.sh exp_FG_mild ./test_data_mild/FSI
+```
+--- 
+## Testing individual speaker's ASR model
+```
+cd kaldi/egs
+git clone --no-checkout https://github.com/SpeechLabSSN/assistive_speech_tech_meity.git
+cd assistive_speech_tech_meity
+git sparse-checkout init --cone
+git sparse-checkout set "models/asr/kaldi_dysarthria"
+git checkout
+```
+```
+cd models/asr/kaldi_dysarthria
+unzip *mild -d test_data_mild 
+unzip *moderate -d test_data_moderate
+```
+```
+# usage
+# decode_mono.sh <exp_dir> <path_to_test_folder>
+# Example : To test with a mild dysarthric speaker data, use the following syntax
+decode_mono.sh exp_FDH ./test_data_moderate/FDH
 ```
 --- 
 # Information on the Testing and Training Datasets
