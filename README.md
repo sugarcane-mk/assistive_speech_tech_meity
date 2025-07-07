@@ -1,8 +1,13 @@
 # Assistive Speech Technologies
 
-This repository contains ASR and TTS models trained at Speech Lab, Department of ECE, SSN College of Engineering, Chennai, as a part of the Assistive Technologies module of the Bashini: NLTM Speech Technologies in Indian Languages Project, funded by the Ministry of Electronics and Information Technology, Govt. of India.
+This repository provides **Automatic Speech Recognition (ASR) and Text-to-Speech (TTS)** models developed by the Speech Lab, Department of Electronics and Communication Engineering, SSN College of Engineering, Chennai. These models were created as part of the Assistive Technologies module within the Bashini: National Language Translation Mission (NLTM) – Speech Technologies in Indian Languages Project, funded by the Ministry of Electronics and Information Technology (MeitY), Government of India.
 
-The data used to train these models are available [here.](https://github.com/SpeechLabSSN/dysarthric_data.git)
+The models aim to support speech processing applications for Indian languages and are intended for research and assistive technology development.
+This repo contains:
+- [Pre-trained ASR model_Individual_speaker_6](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/tree/main/models/asr/kaldi_dysarthria)
+- [ASR mild and moderate](class-wise ASR models)
+- [TTS models HTS](models/tts/hts)
+- [TTS models Taco2](models/tts/taco2)
 
 To gain access to the data, please send an request [here](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) with details of how you wish to use the data.
 
