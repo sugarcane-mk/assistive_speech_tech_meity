@@ -1,4 +1,7 @@
-#!/bin/bash
+ #!/bin/bash
+
+ source cmd.sh
+ source path.sh
 
 # CONFIGURATION
 exp_dir=$1
