@@ -4,7 +4,7 @@ This repository contains ASR and TTS models trained at Speech Lab, Department of
 
 The data used to train these models are available [here.](https://github.com/SpeechLabSSN/dysarthric_data.git)
 
-To gain access to the data, please send an email to speechlabssn@gmail.com with details of how you wish to use the data.
+To gain access to the data, please send an request [here](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) with details of how you wish to use the data.
 
 # ASR _Inferencing_ 
 The prerequisites for running the decoding script and test wav files are shared in the zip folders (assistive_speech_tech_meity.zip and ASR_test.zip)
