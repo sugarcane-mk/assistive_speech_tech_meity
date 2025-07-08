@@ -11,10 +11,14 @@ This repo contains:
 - Script for testing ASR - [decode_mono.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/models/asr/kaldi_dysarthria/decode_mono.sh) , [decode_tri.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/class-wise%20ASR%20models/decode_tri.sh)
 - [Test database](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) (shared upon request)
 
-To gain access to the data, please send an request [here](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) with details of how you wish to use the data.
+
 
 # Usage instructions
-## Pre-requisites
+The step by step procedure to test ASR -> [Jump Here]()
+
+---
+
+## Set up Pre-requisites Kaldi (optional)
 The pre-trained models were trained using an **older version of Kaldi**.
 To avoid conflicts with your current Kaldi installation, use the provided old Kaldi files and dependencies as mentioned below.
  1. `prerequisites.zip`
@@ -31,11 +35,12 @@ To avoid conflicts with your current Kaldi installation, use the provided old Ka
 
 These are all packaged inside the assistive_speech_tech_meity.zip.
 
----
-## Setup & Usage Flow (with steps and utils inside cwd/)
-
- ###   Extract assistive_speech_tech_meity.zip
-       Unzip to your working directory. You will have:
+### Install Prerequisites
+```
+sudo unzip prerequisites.zip -d /usr/lib
+```
+### Setup & Usage Flow (with steps and utils inside cwd/) 
+Your working directory to set up old configs:
 ```
 kaldi/
   egs/
@@ -47,12 +52,8 @@ kaldi/
   tools/         ← old kaldi/tools  
 prerequisites.zip  ← dependencies to copy to /usr/lib
 ```
-### Install Prerequisites
-```
-sudo unzip prerequisites.zip -d /usr/lib
-```
 ### Set Kaldi Root & Environment
-In cwd/path.sh, set KALDI_ROOT to the Kaldi root (e.g. two levels up) using relative paths.
+In cwd/path.sh, set KALDI_ROOT to the Kaldi root using relative paths.
 Then source it before running any scripts:
 ```
 source path.sh
@@ -70,6 +71,7 @@ Do not use the global or system-wide Kaldi versions of these directories.
 Replace any existing steps/ and utils/ folders with the versions included in the assistive_speech_tech_meity.zip package to ensure compatibility with the older Kaldi setup used to train and test the models.
 
 ![image](https://github.com/user-attachments/assets/c4ffe85d-772b-44e1-a578-7562f73be6db)
+
 ---
 
 ## Testing Class-wise ASR
@@ -118,7 +120,7 @@ decode_mono.sh exp_FDH ./test_data_moderate/FDH
 
 ## SSN-TDSC: Tamil Dysarthric Speech Corpus
 
-Ours is the first disordered speech database (SSN-TDSC) in the Indian language. This database is collected in the language Tamil. The dysarthric speakers are identified across various severity levels. Sentences are formulated based on the inputs from speech and language therapists, caretakers, teachers from National Institute for empowerment for people with multiple disabilities. Around 300 phonetically balanced conversational sentences in various domains with 10 repetitions each are collected. The speakers are asked to repeat the sentences after the trainer.
+Ours is the first disordered speech database (SSN-TDSC) in the Indian language. **This database is collected in the language Tamil**. The dysarthric speakers are identified across various severity levels. Sentences are formulated based on the inputs from speech and language therapists, caretakers, teachers from National Institute for empowerment for people with multiple disabilities. Around 300 phonetically balanced conversational sentences in various domains with 10 repetitions each are collected. The speakers are asked to repeat the sentences after the trainer.
 
 ---
 
