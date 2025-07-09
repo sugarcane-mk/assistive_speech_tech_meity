@@ -11,10 +11,11 @@ This repo contains:
 - Script for testing ASR - [decode_mono.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/models/asr/kaldi_dysarthria/decode_mono.sh) , [decode_tri.sh](https://github.com/SpeechLabSSN/assistive_speech_tech_meity/blob/main/class-wise%20ASR%20models/decode_tri.sh)
 - [Test database](https://drive.google.com/file/d/1JiicZTT2X6Q_WQVltMrBwnnSyCHeL5n6/view?usp=drive_link) (shared upon request)
 
-
-
 # Usage instructions
-The step by step procedure to test ASR -> [Jump Here]()
+
+Install and set up Kaldi & Espnet toolkit to test our ASR anfd TTS Models
+- Steps to test ASR -> [Jump Here](#testing-asr)
+- Steps to test TTS -> [Jump Here]()
 
 ---
 
@@ -74,19 +75,27 @@ Replace any existing steps/ and utils/ folders with the versions included in the
 
 ---
 
-## Testing Class-wise ASR
+# Testing ASR
+
+### 1. Clone this repo and setup
 ```
 cd kaldi/egs
-git clone --no-checkout https://github.com/SpeechLabSSN/assistive_speech_tech_meity.git
+git clone https://github.com/SpeechLabSSN/assistive_speech_tech_meity.git
 cd assistive_speech_tech_meity
-git sparse-checkout init --cone
-git sparse-checkout set "class-wise ASR models"
-git checkout
 ```
+### 2. Setup the test files in the current directory
 ```
-cd class-wise ASR models
-unzip *mild -d test_data_mild 
-unzip *moderate -d test_data_moderate
+unzip path/to/ASR_test_data.zip
+
+```
+### 3. Run the test script
+```
+# For batch testing
+./testing_dysarthric_asr_all.sh <speaker> # Replace speaker with any of the following MRA, FGA, MMU, MGN, MKA.
+
+#To test a single wav file
+./testing_dysarthric_asr.sh <path/to/audio-file.wav>
+
 ```
 ```
 # usage
@@ -94,27 +103,7 @@ unzip *moderate -d test_data_moderate
 # Example : To test with a mild dysarthric speaker data, use the following syntax
 decode_tri.sh exp_FG_mild ./test_data_mild/FSI
 ```
---- 
-## Testing individual speaker's ASR model
-```
-cd kaldi/egs
-git clone --no-checkout https://github.com/SpeechLabSSN/assistive_speech_tech_meity.git
-cd assistive_speech_tech_meity
-git sparse-checkout init --cone
-git sparse-checkout set "models/asr/kaldi_dysarthria"
-git checkout
-```
-```
-cd models/asr/kaldi_dysarthria
-unzip *mild -d test_data_mild 
-unzip *moderate -d test_data_moderate
-```
-```
-# usage
-# decode_mono.sh <exp_dir> <path_to_test_folder>
-# Example : To test with a mild dysarthric speaker data, use the following syntax
-decode_mono.sh exp_FDH ./test_data_moderate/FDH
-```
+
 --- 
 # Information on the Testing and Training Datasets
 
